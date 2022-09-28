@@ -1,0 +1,144 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+#BS_footer-container{
+    background-color: #ecf3fc;
+}
+#BS_why_buying{
+    text-align: center;
+    padding: 2%;
+    color: rgb(0,102,255);
+    font-weight: 800;
+    word-spacing: 2%;
+    /* font-family: "Open Sans", sans-serif; */
+}
+#BS_foot_subscribe{
+    padding: 3.5% 0;
+}
+#BS_foot_subscribe >div{
+    width: 60%;
+    margin: auto;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+#BS_foot_subscribe >div>input{
+    width: 85%;
+    padding: 1.5%;
+    outline: none;
+    border: 3px solid rgb(0,102,255);
+}
+#BS_foot_subscribe >div>button{
+    width: 15%;
+    border: none;
+    font-size: 100%;
+    background-color: rgb(0,102,255);
+    color: white;
+    font-weight: 400;
+}
+hr{
+    background-color: rgba(255, 255, 255, 0.84);
+}
+#BS_all_links{
+    padding-top: 3%;
+    display: flex;
+    padding-bottom: 2%;
+}
+#BS_links_container1{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: small;
+    padding: 0 20px;
+    
+}
+#BS_links_container1>div>h4{
+    margin-top: 5%;
+    font-weight: 200;
+    color: #46474A;
+}
+#BS_links_container1>div>h4:hover{
+    cursor: pointer;
+}
+.BS_links_header{
+    color: black !important;
+    font-weight: 700 !important;
+    cursor: default !important;
+}
+
+#BS_links_container2{
+    width: 50%;
+    font-size: 90%;
+    padding:  10px 20px
+}
+
+#BS_links_container2>div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+#BS_qr_images{
+    width: 33%;
+    display: flex;
+
+}
+#BS_qr_images>div:last-child{
+    display: flex;
+    flex-direction: column;
+}
+#BS_qr_images>div:last-child>img{
+    width: 100%;
+}#BS_qr_images>div:first-child>img{
+    width: 100%;
+}
+#BS_qr_images>div:last-child>img:nth-child(2){
+    margin: 3% 0px;
+}
+
+.BS_links_icon{
+    width: 10%;
+}
+#BS_important_links{
+    margin-right: 2%;
+    width: 45%;
+}
+#BS_important_links>div:nth-child(2){
+    margin: 6% 0px;
+}
+#BS_important_links>div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#BS_important_links>div>span{
+    margin-left: 5%;
+}
+
+#BS_social_links{
+    width: 40%;
+}
+#BS_popular_searches{
+    padding: 1%;
+}
+#BS_popular_searches>div{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+}
+#BS_popular_searches>div>button{
+    background-color: white;
+    margin-right: 1%;
+    padding: 0.5% 0.8%;
+    border: none;
+    color: rgb(118, 119, 122);
+    /* font-size: .8rem; */
+    /* width: 15%; */
+}
+#BS_copyright{
+    text-align: center;
+    padding: 2%;
+    color: rgb(118, 119, 122);
+}
