@@ -1,0 +1,113 @@
+
+
+#HP_BOX_SING{
+     
+    height: 480px;
+    width: 360px;
+    padding: 10px 30px;
+    padding-right: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    display: block;
+}
+
+#HP_checkbox1{
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HP_icon{
+    margin-top: 10px;
+    margin-left: 10px;
+} 
+.HP_text{
+    font-size: 13px;
+    color: #666;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 8px;
+}
+
+#HP_for{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.HP_forgot{
+    margin-top: 15px;
+    margin-right: 20px;
+    font-size: 13px;
+    height: 18px;
+    cursor: pointer;
+    border-bottom: 1px solid #999;
+    color: #999;
+    display: inline-block;
+}
+#HP_mark{
+   border-radius: 50%;
+   border: 1px solid black;
+   width: 15px;
+   height: 13px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#HP_Acc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 93%;
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid grey;
+    border-color: #d1d1d1;
+    color: #666;
+    border-radius: 4px;
+}
+.HP_line_or{
+    height: 20px;
+    border-bottom: 1px solid #e6e7e8;
+    position: relative;
+}
+#HP_or{
+    font-size: 15px;
+    width: 16px;
+    color: #999;
+    background-color: #fff;
+    padding: 0 12px;
+    margin-left: -21px;
+    position: absolute;
+    left: 50%;
+    bottom: -9px;
+    z-index: 2;
+}
+.share_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#HP_google{
+    width: 40px;
+    height: 40px;
+    padding-bottom: 10px;
+}
+#alert{
+    font-size: small;
+    color:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    width: 93%;
+    margin-top: 10px;
+}
