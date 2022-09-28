@@ -1,0 +1,122 @@
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    #HP_logo{
+        height: 120px;
+        width: 100%;
+        background-color: #06f;
+        color: white;
+        display:flex ;
+        justify-content: center;
+        align-items: center;
+    }
+    #HP_logo img{
+        width:200px;
+    }
+    #HP_signup{
+        
+        height: 400px;
+        width: 360px;
+        padding: 20px 30px;
+        padding-right: 10px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+        display: block;
+    }
+    #HP_container{
+        height: 600px;
+        width: 100%;
+        border: 1px solid green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('https://img.gkbcdn.com/s3/bn/2203/signin-6239450f2b40c91b9c8a4526.jpg');
+    }
+
+    input,#HP_checkbox,#HP_access,#HP_top_head,#HP_submit{
+        height: 40px;
+        width: 93%;
+        margin-top: 10px;
+        display: flex;
+    }
+    #HP_top_head{
+        display: flex;
+        justify-content: space-between;
+    }
+    #HP_submit{
+        border: 1px solid #06f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #06f;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #HP_checkbox{
+        
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #HP_signin{
+        display: inline-block;
+        font-size: 14px;
+        color: #333333;
+        height: 30px;
+        line-height: 30px;
+        font-family:Arial, Helvetica, sans-serif ;
+    }
+    #HP_create{
+        color: #333333;
+        font-size: 18px;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 30px;
+        font-family:Arial, Helvetica, sans-serif ;
+    }
+
+    #HP_CBOX{
+        height: 14px;
+        width: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #HP_access_code{
+        width: 60%;
+    }
+    #HP_random{
+        margin-top: 10px;
+        height: 43px;
+        width:35% ;
+    }
+    #HP_access{
+        justify-content: space-between;
+    }
+    #HP_Policy{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #u,#HP_Policy{
+        font-size: 13px;
+        color: #666;
+        display: inline-block;
+        vertical-align: top;
+    }
+    #HP_login_check{
+        display: flex;
+    }
+    .bot{
+        color: #666;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: justify;
+        padding-top: 16px;
+    }
