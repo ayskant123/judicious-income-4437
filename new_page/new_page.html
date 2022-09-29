@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New page</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+      }
+      #BS_new_head {
+        font-size: 23px;
+        text-align: center;
+        padding: 35px;
+      }
+      #BS_new_data {
+        background-color: #f2f2f2;
+        padding: 30px;
+      }
+      #BS_filter{
+        background-color: #fff;
+        padding: 10px;
+        margin-bottom: 20px;
+        /* margin-top: 30px; */
+      }
+      #BS_filter > div:nth-child(1) {
+        display: flex;
+        gap: 12px;
+        padding: 20px 10px;
+        align-items: center;
+      }
+      #BS_filter > div:nth-child(1) > button {
+        padding: 5px;
+        border: 1px solid rgb(131, 131, 131);
+      }
+      #BS_filter > div:nth-child(2) {
+        display: flex;
+        gap: 12px;
+        padding: 20px 10px;
+        align-items: center;
+      }
+      #BS_filter > div:nth-child(2) > select {
+        width: 20%;
+        border: 1px solid rgb(131, 131, 131);
+      }
+      #BS_min,
+      #BS_max {
+        margin-right: 15px;
+      }
+      #BS_filter > div:nth-child(3){
+        display: flex;
+        gap: 12px;
+        padding: 20px 10px;
+        align-items: center;
+      }
+
+      #BS_new_append{
+        /* padding: 20px; */
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 30px;
+      }
+      #BS_new_append>div{
+        background-color: #fff;
+      }
+      #BS_new_append>div>p,#BS_new_append>div>h4{
+        padding: 0px 20px;
+      }
+      #BS_new_append>div>div{
+        margin-top: 20px ;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 20px;
+        bottom: 0px;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="BS_new_container">
+      <div id="BS_new_head">
+        <h1>New Arrivals</h1>
+      </div>
+
+      <div id="BS_new_data">
+        <div id="BS_filter">
+          <div>
+            <p>New Arrived :</p>
+            <button>7 days</button>
+            <button>15 days</button>
+            <button>30 days</button>
+          </div>
+
+          <div>
+            <p>Filter :</p>
+            <select name="" id="">
+              <option value="">India</option>
+              <option value="">Australia</option>
+              <option value="">Japan</option>
+              <option value="">Pakistan</option>
+              <option value="">Russia</option>
+              <option value="">Ukraine</option>
+              <option value="">America</option>
+            </select>
+
+            <p><input type="checkbox" /> On Sale</p>
+            <p><input type="checkbox" /> Free Shipping Only</p>
+
+            <p>
+              Price :
+              <input type="number" placeholder="Min" id="BS_min" />
+              <input type="number" placeholder="Max" id="BS_max"/>
+                <button id="BS_range">OK</button>
+            </p>
+          </div>
+
+          <div>
+            <p>Sort By :</p>
+            <button id="BS_Normal">Normal</button>
+            <button id="BS_a_to_z">A to Z</button>
+            <button id="BS_z_to_a">Z to A </button>
+            <button id="BS_Low">Price Low</button>
+            <button id="BS_High">Price High</button>
+          </div>
+        </div>
+
+        <div id="BS_new_append">
+
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<script src="./new_page.js"></script>
