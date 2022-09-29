@@ -1,0 +1,34 @@
+body{
+    color: #def3f1;
+    border: solid blue;
+}
+#aym_top img{
+    width: 100%;
+
+} 
+#items{
+    
+    grid-template-columns: repeat(4,1fr);
+    display: grid;
+    gap: 20px;
+}
+img{
+    width: 100%;
+}
+.item{
+    border:solid red 1px;
+    width: 90%;
+ 
+    
+}
+#aym_header{
+    color: #000;
+}
+#aym_header{
+    width: 100%;
+    border: solid red 1px;
+    text-align: center;
+}
+#aym_header h2{
+color: #358bff;
+}
