@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping</title>
+    <link rel="shortcut icon" href="https://m.geekbuying.com/favicon.ico">
+    <link rel="stylesheet" href="shipping.css">
+</head>
+<body>
+    <div id="HP_cartnavbar">
+        <img src="https://content1.geekbuying.com/V1.4/en/images/indexV7/Geekbuying.png" alt="">
+        <hr>
+        <h4>Secure Checkout</h4>
+    </div>
+    <h2 id="HP_addr">Shipping Address</h2>
+   <div id="HP_BOX"><p>To ensure delivery and prevent delays, please enter the valid alphabetic character.</p></div>
+   <div id="main_div_form">
+
+    <form id="form">
+        <label> <span>*</span> First Name:</label>
+        <input type="text" name="firstName" > <br>
+        <label> <span>*</span> Last Name:</label>
+        <input type="text" name="lastName" > <br>
+        <label> <span>*</span> Email:</label>
+        <input type="email" name="lastName" ><br>
+        <label> <span>*</span> Country/Region:</label>
+
+        <select name="" id="country">
+            <option value="">Select country</option>
+            <option value="India">India</option>
+            <option value="China">China</option>
+            <option value="United States">United States</option>
+            <option value="Italy">Italy</option>
+            <option value="Australia">Australia</option>
+            <option value="Germany" >Germany</option>
+            <option value="Nepal" >Nepal</option>
+            <option value="Aland Islands" >Åland Islands</option>
+            <option value="Albania" >Albania</option>
+            <option value="Algeria" >Algeria</option>
+             <option value="Andorra" >Andorra</option>
+        </select> <br>
+
+        <label> <span>*</span> State/Province:</label>
+
+        <select id="state" name="country-state">
+            <option value="">Select state</option>
+            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+            <option value="Daman and Diu">Daman and Diu</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+        </select>
+        
+        <br>
+
+        <label> <span>*</span> City:</label>
+        
+        <select name="" id="city">
+            <option value="">Select City</option>
+            <option value="Badarpur">Badarpur</option>
+            <option value="Burari">Burari</option>
+            <option value="Chilla Saroda Bangar">Chilla Saroda Bangar</option>
+            <option value="Firozabad">Firozabad</option>
+            <option value="Tughlakabad">Tughlakabad</option>
+            <option value="Mehrauli">Mehrauli</option>
+            <option value="Shergarh">Shergarh</option>
+            <option value="Qila Rai Pithora">Qila Rai Pithora</option>
+            <option value="Shahjehabanad">Shahjehabanad</option>
+            <option value="Siri">Siri</option>
+        </select>
+        
+        <br>
+
+        <label> <span>*</span> Zip/Postal code:</label>
+        <input type="number" id="pincode">
+
+        <br>
+
+        <label> <span>*</span>Address:</label>
+        <input type="text" id="address"> <br>
+
+        <label> <span>*</span>Phone Number:</label>
+        <input type="number" id="number">
+
+        <br>
+
+        <input type="submit" id="submit" value="Save">
+    </form>
+   </div>
+
+   
+    <h3 class="HP_Title">Product List</h3>
+    <div id="productList"></div>
+
+    <h3 class="HP_Title">Shipping & Delivery</h3>
+    <div id="HP_delivery">
+        <div>
+            <p>Order Subtotal:</p>
+            <p id="HP_ST"></p>
+        </div>
+        <div>
+            <p>Shipping Cost:</p>
+             <p>$ 80</p>
+        </div>
+        <div>
+            <p>Grand Total:</p>
+            <h3 id="red"></h3>
+        </div>
+
+
+
+        <button id="HP_Place_order_btn"><h3>Place Order</h3> </button>
+
+    </div>
+
+    <div id="HP_Foot"> <img src="https://content1.geekbuying.com/V1.4/en/images/shopcart_footicon.png" alt=""></div>
+   
+
+</body>
+</html>
+<script src="shipping.js"></script>
