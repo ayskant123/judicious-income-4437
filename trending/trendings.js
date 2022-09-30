@@ -3,11 +3,12 @@ async function showItem(){
 try{
     
     
-    let res=await fetch('https://fakestoreapi.com/products')
-    let Info=await res.json()
-     let  items=Info.data
-    console.log(Info)
-     appendItem(Info)
+    
+    let res=await fetch('https://dummyjson.com/products')
+     let Info=await res.json()
+      data=Info.products
+    console.log(data)
+    appendItem(data)
     
    
 }
@@ -22,29 +23,52 @@ function appendItem(Info)
     Info.forEach(function(ele,index) {
         let div=document.createElement('div')
         div.setAttribute("class","item")
+        let div1=document.createElement('div')
+        div1.setAttribute("class","aym_pr")
     let img=document.createElement('img')
-    img.src=ele.image
-    let name=document.createElement('h2')
-    name.innerText=ele.name
-    let price=document.createElement('p')
-    price.innerText=ele.price
-    let btn1=document.createElement('button')
-    btn1.innerText="Add To Cart"
-    btn1.setAttribute("class","add_to_cart")
+    img.src=ele.thumbnail
+        div1.append(img)
+        let div2=document.createElement('div')
+        let span1=document.createElement('span')
+        span1.innerText=ele.title
+         div2.setAttribute("class","aym_title")
+        div2.append(span1)
+        let div3=document.createElement('div')
+        let span2=document.createElement('span')
+        span2.innerText='Rating:' + ele.rating
+        div3.append(span2)
+        let div4=document.createElement('div')
+        let span3=document.createElement('span')
+        let h2=document.createElement('h2')
+        h2.innerText='$'+ele.price
+        span3.append(h2)
+        div4.append(span3)
+        let div5=document.createElement('div')
+        div5.setAttribute("class","shop")
+       let i=document.createElement('i')
+       i.setAttribute("class","fa-solid fa-cart-shopping")
+        let btn1=document.createElement('button')
+        btn1.setAttribute("class","addTocart")
+          
+        btn1.append(i)
+        div5.append(btn1)
+   
     btn1.addEventListener("click",function(){
         addTocart(index)
     })
     let btn2=document.createElement('button')
-    btn2.innerText="Buy Now"
+    btn2.innerText="Buy"
+    div5.append(btn2)
      btn2.setAttribute("class","Buy_Now")
     btn2.addEventListener("click",function(){
         buyNow(index)
     })
-
-   div.append(img,name,price,btn1,btn2)
+      
+   div.append(div1,div2,div3,div4,div5)
    container.append(div)
 
-    });
+  });
+}
     function addTocart(index)
     {
         
@@ -53,7 +77,7 @@ function appendItem(Info)
             // let couIt=document.getElementById("item_count")
             // couIt.innerText=count.length+1
             let cartData=JSON.parse(localStorage.getItem("items"))||[]
-               cartData.push(Info[index])
+               cartData.push(data[index])
                localStorage.setItem("items",JSON.stringify(cartData))
                console.log(cartData)
     
@@ -61,8 +85,11 @@ function appendItem(Info)
        
     }
    function buyNow(index){
-   let BuyNow=localStorage.setItem("BuyData",JSON.stringify(Info[index]))
+   let BuyNow=localStorage.setItem("BuyData",JSON.stringify(data[index]))
     console.log(BuyNow)
-    window.location.href="details.html"
+    window.location.href="../details/details.html"
     }
- }
+  
+
+    
+    
