@@ -1,0 +1,153 @@
+#main{
+    width: 90%;
+    margin: auto;
+    /* border:solid red; */
+    height: 700px;
+}
+#details{
+    display: flex;
+    margin: 5px 5px 5px 5px;
+    height: 98%;
+   
+
+}
+
+#img{
+    width: 47%;
+    height: 95%;
+    /* border: solid green 1px; */
+    margin: 5px 5px 5px 5px;
+}
+#buy_des{
+    
+        width: 47%;
+        height: 95%;
+        /* border: solid green 1px; */
+        margin: 5px 5px 5px 5px;
+    
+}
+#des{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+   line-height: 20px;
+    height:auto;
+    /* border: solid 1px blue; */
+}
+#des>div>p{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+#id_addInfo{
+    display: flex;
+}
+#counter{
+    margin: auto;
+    /* margin-left: 70px; */
+ color: tomato;
+
+}
+#id_addInfo>div{
+ margin-left: 20px;
+ color:#f1403c;
+}
+#ex_info{
+    width: 95%;
+    /* height: 30px; */
+    margin: auto;
+    display: flex;
+    /* border: solid 1px yellow; */
+}
+#ex_info>div{
+    margin: auto;
+
+}
+#ex_info>div>span{
+    font-family: sans-serif;
+
+}
+#Price{
+    display: flex;
+    width: 95%;
+
+
+    margin: auto;
+}
+#Price>div{
+    margin: auto;
+}
+#Price>div>span{
+    font-family: serif;
+    font-weight: bolder;
+    font-size: 30px;
+}
+#Price>div>p{
+    font-family: serif;
+    font-weight: bolder;
+    color: white;
+    background-color: #f1403c;
+    border-radius: 5px;
+}
+hr{
+    width: 95%;
+    align-items: center;
+}
+#Ship{
+    display: flex;
+    margin: auto;
+
+}
+#Ship>div{
+    margin: auto;
+}
+#Ship>div>button{
+    border: solid grey 1px;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+#op_img img{
+    width: 20%;
+    
+
+}
+#option{
+    display: flex;
+    margin: auto;
+}
+#option>div{
+    margin: auto;
+    margin-left: 63px;
+}
+/* #btn{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+#btn>button{
+    margin: auto;
+    margin-left: 80px;
+
+} */
+.add_to_cart{
+    width: 150px;
+    height: 50px;
+    /* margin: auto; */
+    margin-top: 50px;
+    margin-left: 120px;
+    color: #3662d8;
+    background-color: white;
+    border: solid #3662d8 1px;
+    cursor: pointer;
+}
+.Buy_Now{
+    width: 150px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 30px;
+    background-color: #3662d8;
+    color: white;
+    border: solid 0px;
+    cursor: pointer;
+}
