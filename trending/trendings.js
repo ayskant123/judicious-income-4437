@@ -25,8 +25,8 @@ function appendItem(Info)
         div.setAttribute("class","item")
         let div1=document.createElement('div')
         div1.setAttribute("class","aym_pr")
-    let img=document.createElement('img')
-    img.src=ele.thumbnail
+        let img=document.createElement('img')
+        img.src=ele.thumbnail
         div1.append(img)
         let div2=document.createElement('div')
         let span1=document.createElement('span')
@@ -87,9 +87,12 @@ function appendItem(Info)
    function buyNow(index){
    let BuyNow=localStorage.setItem("BuyData",JSON.stringify(data[index]))
     console.log(BuyNow)
-    window.location.href="../details/details.html"
+    window.location.href="../judicious-income-4437/details.html"
     }
   
 
     
     
+    let nav_logo = document.getElementById("nav_logo").addEventListener("click",function(){
+        window.location.href ="../judicious-income-4437/index.html"
+      })

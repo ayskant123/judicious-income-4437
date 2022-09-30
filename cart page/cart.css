@@ -185,6 +185,10 @@ margin-bottom: 40px;
     text-align: left;
     margin-left: 5px;
 }
+#Div1 img{
+    width: 70px;
+    height: 70px;
+}
 #Div2{
     /* border: 2px solid orange; */
     width: 30%;
@@ -210,10 +214,17 @@ margin-bottom: 40px;
     display: flex;
     gap: 18px;
 }
+a{
+    color: white;
+}
 
 #Div4 button{
     background-color: white;
     border: 0px;
+    color:black;
+    font-weight: bold;
+    font-size: 24px;
+
 }
 
 button+p{
@@ -239,3 +250,5 @@ button+p{
     display: flex;
     
 }
+
+

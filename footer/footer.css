@@ -15,6 +15,9 @@
     word-spacing: 2%;
     /* font-family: "Open Sans", sans-serif; */
 }
+a{
+    color: white;
+}
 #BS_foot_subscribe{
     padding: 3.5% 0;
 }

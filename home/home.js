@@ -56,3 +56,9 @@ function slideShow()
 }
 slideShow();
 // + days + "d " 
+
+let nav_logo = document.getElementById("nav_logo").addEventListener("click",function(){
+    window.location.href ="../judicious-income-4437/index.html"
+  })
+    
+

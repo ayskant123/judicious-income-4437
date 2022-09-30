@@ -1,13 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New page</title>
     <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Open Sans", sans-serif;
+      }
+      #BS_new_head {
+        font-size: 23px;
+        text-align: center;
+        padding: 35px;
+      }
+      #BS_new_data {
+        background-color: #f2f2f2;
+        padding: 30px;
+      }
+      #BS_filter{
+        background-color: #fff;
+        padding: 10px;
+        margin-bottom: 20px;
+        /* margin-top: 30px; */
+      }
+      #BS_filter > div:nth-child(1) {
+        display: flex;
+        gap: 12px;
+        padding: 20px 10px;
+        align-items: center;
+      }
+      #BS_filter > div:nth-child(1) > button {
+        padding: 5px;
+        border: 1px solid rgb(131, 131, 131);
+      }
+      #BS_filter > div:nth-child(2) {
+        display: flex;
+        gap: 12px;
+        padding: 20px 10px;
+        align-items: center;
+      }
+      #BS_filter > div:nth-child(2) > select {
+        width: 20%;
+        border: 1px solid rgb(131, 131, 131);
+      }
+      #BS_min,
+      #BS_max {
+        margin-right: 15px;
+      }
+      #BS_filter > div:nth-child(3){
+        display: flex;
+        gap: 12px;
+        padding: 20px 10px;
+        align-items: center;
+      }
+
+      #BS_new_append{
+        /* padding: 20px; */
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 30px;
+      }
+      #BS_new_append>div{
+        background-color: #fff;
+      }
+      #BS_new_append>div>p,#BS_new_append>div>h4{
+        padding: 0px 20px;
+      }
+      #BS_new_append>div>div{
+        margin-top: 20px ;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 20px;
+        bottom: 0px;
         
-        *{
+      }
+
+      /* *************navbar********** */
+
+      *{
             font-family: sans-serif;
             box-sizing: border-box;
             margin: 0px;
@@ -322,11 +396,158 @@
         .country_select{
             text-align: center;
         }
-  </style>
-  <body>
-    
 
-          
+        /* **********nav************ */
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+#BS_footer-container{
+    background-color: #ecf3fc;
+}
+#BS_why_buying{
+    text-align: center;
+    padding: 2%;
+    color: rgb(0,102,255);
+    font-weight: 800;
+    word-spacing: 2%;
+    /* font-family: "Open Sans", sans-serif; */
+}
+#BS_foot_subscribe{
+    padding: 3.5% 0;
+}
+#BS_foot_subscribe >div{
+    width: 60%;
+    margin: auto;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+#BS_foot_subscribe >div>input{
+    width: 85%;
+    padding: 1.5%;
+    outline: none;
+    border: 3px solid rgb(0,102,255);
+}
+#BS_foot_subscribe >div>button{
+    width: 15%;
+    border: none;
+    font-size: 100%;
+    background-color: rgb(0,102,255);
+    color: white;
+    font-weight: 400;
+}
+a{
+    color: white;
+}
+hr{
+    background-color: rgba(255, 255, 255, 0.84);
+}
+#BS_all_links{
+    padding-top: 3%;
+    display: flex;
+    padding-bottom: 2%;
+}
+#BS_links_container1{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: small;
+    padding: 0 20px;
+    
+}
+#BS_links_container1>div>h4{
+    margin-top: 5%;
+    font-weight: 200;
+    color: #46474A;
+}
+#BS_links_container1>div>h4:hover{
+    cursor: pointer;
+}
+.BS_links_header{
+    color: black !important;
+    font-weight: 700 !important;
+    cursor: default !important;
+}
+
+#BS_links_container2{
+    width: 50%;
+    font-size: 90%;
+    padding:  10px 20px
+}
+
+#BS_links_container2>div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+#BS_qr_images{
+    width: 33%;
+    display: flex;
+
+}
+#BS_qr_images>div:last-child{
+    display: flex;
+    flex-direction: column;
+}
+#BS_qr_images>div:last-child>img{
+    width: 100%;
+}#BS_qr_images>div:first-child>img{
+    width: 100%;
+}
+#BS_qr_images>div:last-child>img:nth-child(2){
+    margin: 3% 0px;
+}
+
+.BS_links_icon{
+    width: 10%;
+}
+#BS_important_links{
+    margin-right: 2%;
+    width: 45%;
+}
+#BS_important_links>div:nth-child(2){
+    margin: 6% 0px;
+}
+#BS_important_links>div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#BS_important_links>div>span{
+    margin-left: 5%;
+}
+
+#BS_social_links{
+    width: 40%;
+}
+#BS_popular_searches{
+    padding: 1%;
+}
+#BS_popular_searches>div{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+}
+#BS_popular_searches>div>button{
+    background-color: white;
+    margin-right: 1%;
+    padding: 0.5% 0.8%;
+    border: none;
+    color: rgb(118, 119, 122);
+    /* font-size: .8rem; */
+    /* width: 15%; */
+}
+#BS_copyright{
+    text-align: center;
+    padding: 2%;
+    color: rgb(118, 119, 122);
+}
+    </style>
+  </head>
+  <body>
     <div id="top_navbar">
 
         <div id="BB_main">
@@ -380,7 +601,7 @@
 
         <div id="top_navbar_second">
             <div id="top_navbar_second_img">
-                <img src="https://content1.geekbuying.com/V1.4/en/images/indexV7/Geekbuying.png" alt="">
+                <img id="nav_logo" src="https://content1.geekbuying.com/V1.4/en/images/indexV7/Geekbuying.png" alt="">
             </div>
             <div id="top_navbar_second_search">
                 <select name="" id="">
@@ -434,12 +655,14 @@
                 
             </div>
             </div>
+
             <div id="top_navbar_second_user">
                 <img src="https://us.123rf.com/450wm/ylivdesign/ylivdesign1510/ylivdesign151000120/46153782-profile-icon-white-simple-image-isolated-on-blue-background.jpg?ver=6" alt="">
-                <p>Sign in</p>
+                <a style="text-decoration: 0;" href="../judicious-income-4437/signin.html"><p>Sign in</p></a>
             </div>
+
             <div id="top_navbar_second_cart">
-                <img src="https://content1.geekbuying.com/V1.4/en/images/indexV7/cart.png" alt="">
+                <a href="../judicious-income-4437/cart.html"><img src="https://content1.geekbuying.com/V1.4/en/images/indexV7/cart.png" alt=""></a>
             </div>
         </div>
 
@@ -463,8 +686,8 @@
             </div>
 
             <div id="all_options_categories">
-            <div>New</div>
-            <div>Bestselling</div>
+            <div><a style="text-decoration: 0;" href="../judicious-income-4437/new_page.html">New</a></div>
+            <div><a style="text-decoration: 0;" href="../judicious-income-4437/Best_selling.html">Bestselling</a></div>
             <div>Brand</div>
             <div>Clearance</div>
             <div>Deals</div>
@@ -476,9 +699,181 @@
     
    </div>
 </div>
-   
+
+    <div id="BS_new_container">
+      <div id="BS_new_head">
+        <h1>Bestselling</h1>
+      </div>
+
+      <div id="BS_new_data">
+        <div id="BS_filter">
+          <div>
+            <p>New Arrived :</p>
+            <button>7 days</button>
+            <button>15 days</button>
+            <button>30 days</button>
+          </div>
+
+          <div>
+            <p>Filter :</p>
+            <select name="" id="">
+              <option value="">India</option>
+              <option value="">Australia</option>
+              <option value="">Japan</option>
+              <option value="">Pakistan</option>
+              <option value="">Russia</option>
+              <option value="">Ukraine</option>
+              <option value="">America</option>
+            </select>
+
+            <p><input type="checkbox" /> On Sale</p>
+            <p><input type="checkbox" /> Free Shipping Only</p>
+
+            <p>
+              Price :
+              <input type="number" placeholder="Min" id="BS_min" />
+              <input type="number" placeholder="Max" id="BS_max"/>
+                <button id="BS_range">OK</button>
+            </p>
+          </div>
+
+          <div>
+            <p>Sort By :</p>
+            <button id="BS_Normal">Normal</button>
+            <button id="BS_a_to_z">A to Z</button>
+            <button id="BS_z_to_a">Z to A </button>
+            <button id="BS_Low">Price Low</button>
+            <button id="BS_High">Price High</button>
+          </div>
+        </div>
+
+        <div id="BS_new_append">
 
 
+        </div>
+      </div>
+    </div>
 
-</body>
+    <footer>
+      <div id="BS_footer-container">
+  
+          <div id="BS_why_buying">
+              Why buying from Geekbuying ?     +
+              
+          </div>
+          <hr>
+  
+          <div id="BS_foot_subscribe">
+              <div>
+                  <input type="search" name="" id="BS_search" placeholder="Enter to email to get 5% off coupon">
+                  <button>Subscribe</button>
+              </div>
+          </div>
+          <hr>
+  
+  
+          <div id="BS_all_links">
+  
+              <div id="BS_links_container1">
+                  <div>
+                      <h4 class="BS_links_header">Help</h4>
+                      <h4>Order status</h4>
+                      <h4>About us</h4>
+                      <h4>Contact us</h4>
+                      <h4>Warranty</h4>
+                      <h4>FAQs</h4>
+                      <h4>Sitemap</h4>
+                  </div>
+  
+                  <div>
+                      <h4 class="BS_links_header">Support</h4>
+                      <h4>WhatGeek</h4>
+                      <h4>Shipping guide</h4>
+                      <h4>Payment information</h4>
+                      <h4>Wholesale</h4>
+                      <h4>Drop shipping</h4>
+                      <h4>Blog</h4>
+                      <h4>Affiliates</h4>
+                  </div>
+  
+                  <div>
+                      <h4 class="BS_links_header">Policies</h4>
+                      <h4>Terms & conditions</h4>
+                      <h4>Return Policy</h4>
+                      <h4>Privacy</h4>
+                      <h4>Declaration</h4>
+                      <h4>Custom</h4>
+                  </div>
+              </div>
+  
+              <div id="BS_links_container2">
+                  <h4 class="BS_links_header">Download the App</h4>
+                  <div>
+                      <!-- <h4 class="links_header">Download the App</h4> -->
+                      <div id="BS_qr_images">
+                          <div>
+                              <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png" alt="">
+                          </div>
+  
+                          <div>
+                              <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt="">
+                              <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt="">
+                              <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" alt="">
+                          </div>
+                          
+                      </div>
+                      <div id="BS_important_links">
+                          <div><img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/893/893257.png" alt=""><span>Service_payment@geekbuying.com</span> </div>
+                          <div><img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/7937/7937770.png" alt=""><span>Ticket</span> </div>
+                          <div><img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/3237/3237472.png" alt=""><span>Live Chat</span> </div>
+                      </div>
+                  </div>
+  
+                  <h4 class="BS_links_header">Connect with us</h4>
+                  <div id="BS_social_links">
+                      <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/3128/3128304.png" alt="">
+                      <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/6681/6681032.png" alt="">
+                      <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/786/786407.png" alt="">
+                      <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/1057/1057248.png" alt="">
+                      <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="">
+                      <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/1724/1724681.png" alt="">
+                  </div>
+                  
+              </div>
+              
+          </div>
+  
+          <div id="BS_popular_searches">
+              <h4 id="BS_links_header">Popular Seaches</h4>
+              <div>
+                  <button>Geekbuying Coupon</button>
+                  <button>Roborock S7 Pro Ultra</button>
+                  <button>Tronsmart Bluetooth Speakers</button>
+                  <button>Windows mini PC</button>
+                  <button>ENGWE X26</button>
+                  <button>android tv boxes</button>
+                  <button>Kugookirin G2 Pro</button>
+              </div>
+              <div>
+                  <button>Portable Power Station</button>
+                  <button>LDS Robot Vaccum</button>
+                  <button>Electric Bike</button>
+              </div>
+  
+          </div>
+  
+          <hr>
+  
+          <div id="BS_copyright">
+              <p>Copyright 2012-2022 GeekBuying.com. All rights reserved.</p>
+          </div>
+  
+  
+  
+      </div>
+  </footer>
+  </body>
 </html>
+
+
+<script src="../judicious-income-4437/BESTSELLING/Best_selling.js"></script>

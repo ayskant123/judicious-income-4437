@@ -1,11 +1,12 @@
 
 let products = JSON.parse(localStorage.getItem("items"));
+console.log(products)
 
-let pro = document.getElementById("product")
+let pro = document.getElementById("HP_product")
 
     let ship = document.querySelector("#ship")
     let ship1 = document.querySelector("#ship1")
-    let sub = document.querySelector("#sub")
+    let sub = document.querySelector("#HP_sub")
     let total1 = document.querySelector("#total1")
     
     let subTotal
@@ -32,14 +33,14 @@ let pro = document.getElementById("product")
                 let div1 = document.createElement("div");
                 div1.setAttribute("id","Div1")
                 let img = document.createElement("img");
-                img.src= el.image;
+                img.src= el.thumbnail;
                 
                 div1.append(img)
 
                 let div2 = document.createElement("div");
                 div2.setAttribute("id","Div2")
                 let desc = document.createElement("p");
-                desc.innerText = el.description;
+                desc.innerText = el.title;
 
                 div2.append(desc)
 
@@ -52,10 +53,13 @@ let pro = document.getElementById("product")
 
                 let div4 = document.createElement("div");
                 div4.setAttribute("id","Div4")
+                
                 let dec = document.createElement("button");
                 dec.innerText= "-";
+
                 let inc = document.createElement("button");
                 inc.innerText="+";
+
                 let p = document.createElement("p");
                 p.innerText= count;
 
@@ -108,7 +112,7 @@ let pro = document.getElementById("product")
             el.count--;
         }
 
-        localStorage.setItem("addcart",JSON.stringify(products));
+        localStorage.setItem("items",JSON.stringify(products));
         window.location.reload()
 
     }
@@ -116,18 +120,22 @@ let pro = document.getElementById("product")
     function  incCount(el){
 
         el.count++;
-        localStorage.setItem("addcart",JSON.stringify(products));
+        localStorage.setItem("items",JSON.stringify(products));
         window.location.reload()
 
     }
 
     function deleteItem(el,index){
         products.splice(index,1);
-        localStorage.setItem("addcart",JSON.stringify(products));
+        localStorage.setItem("items",JSON.stringify(products));
         window.location.reload()
     }
 
     document.querySelector("#proceed").addEventListener("click",function(){
-        window.location.href="./shipping/shipping.html"
+        window.location.href="../shipping/shipping.html"
     });
+
+    let nav_logo = document.getElementById("nav_logo").addEventListener("click",function(){
+        window.location.href ="../judicious-income-4437/index.html"
+      })
 

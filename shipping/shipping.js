@@ -1,6 +1,6 @@
 
 
-let total = JSON.parse(localStorage.getItem("HP_checkout_total"));
+let total = JSON.parse(localStorage.getItem("HP_checkout_total")) ;
 
 let Sub = document.querySelector("#HP_ST");
 Sub.innerText = "$ "+Number(total);
@@ -13,4 +13,6 @@ localStorage.setItem("HP_final_Total",JSON.stringify(x))
 
 document.querySelector("#HP_Place_order_btn").addEventListener("click",function(){
    window.location.href="./payments/payments.html"
-})
+});
+
+// total.innerText=null

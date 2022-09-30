@@ -270,4 +270,3 @@ let nav_logo = document.getElementById("nav_logo").addEventListener("click",func
 
 
 
-

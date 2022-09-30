@@ -211,6 +211,9 @@ img+p{
     border: 0px;
     border-radius: 5px;
  }
+ a{
+    color: white;
+}
 
 
  #HP_Foot{

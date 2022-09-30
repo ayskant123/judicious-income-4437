@@ -26,6 +26,7 @@ let x = setInterval(function() {
   }
 }, 1000);
 // ......................................................................................//
+
 let item_obj=JSON.parse(localStorage.getItem("BuyData"))
  console.log(item_obj.images[0]    )
  appendItem(item_obj)
@@ -131,8 +132,12 @@ let item_obj=JSON.parse(localStorage.getItem("BuyData"))
 
        
     }
-   function buyNow(index){
-   let BuyNow=localStorage.setItem("BuyData",JSON.stringify(Info[index]))
+   function buyNow(){
+   let BuyNow=localStorage.setItem("BuyData",JSON.stringify(item_obj))
     console.log(BuyNow)
-    window.location.href="details.html"
+    window.location.href="../judicious-income-4437/shipping.html"
     }
+
+    let nav_logo = document.getElementById("nav_logo").addEventListener("click",function(){
+        window.location.href ="../judicious-income-4437/index.html"
+      })
