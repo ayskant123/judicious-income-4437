@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="shortcut icon" type="image/ico" href="https://m.geekbuying.com/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div id="HP_cartnavbar">
+        <img src="https://content1.geekbuying.com/V1.4/en/images/indexV7/Geekbuying.png" alt="">
+        <hr>
+        <h4>Secure Checkout</h4>
+    </div>
+    <div><h1 style="padding-left: 100px;">Payment Gateway</h1></div>
+    <div id="HP_main_box">
+        <div id="option">
+
+            <h2><i class='fas fa-wallet'></i>Wallet</h2>
+            <h2><img src="https://img.icons8.com/fluency/40/000000/bhim.png"/>UPI</h2>
+            <h2><i style="font-size:24px" class="fa">&#xf09d;</i>Cards</h2>
+            <h2><i style="font-size:24px" class="fa">&#xf19c;</i>Net Banking</h2>
+            <h2>Pay On Delivery</h2>
+
+        </div>
+
+        <div id="card">
+            <h3>Credit & Debit Cards</h3>
+            <p>Add new cards for payment</p>
+            <p> Card Number</p>
+            <input type="number" placeholder="Enter Card Number">
+            <p>Expiry Date</p>
+            <input type="date">
+            <p>CVV</p>
+            <input type="number" placeholder="Enter CVV">
+           <p>Your card details will be saved securely for future transactions, based on the industry standards. <u>Terms & condition</u></p>
+
+           <button id="btn">Make Payment</button>
+           
+        </div>
+
+        
+
+        <div id="summary">
+            <div id="summary1"><h2>Payment Summary</h2></div>
+            <div id="HP_paybox">
+
+                <div id="HP_pay1">
+                    <p>Amount</p>
+                    <p>Card Offer</p>
+                </div>
+
+                <div id="HP_pay2">
+                    <p>0</p>
+                    <p>-15.00</p>
+                </div>
+                
+            </div>
+                <hr>
+           <div id="total">
+
+            <p >Total Amount</p>
+            <p>0</p>
+
+           </div>
+           <hr>
+        </div>
+    </div>
+
+    <div id="HP_Footer"> <img src="https://content1.geekbuying.com/V1.4/en/images/shopcart_footicon.png" alt=""></div>
+</body>
+</html>
+
+<script>
+    let x =localStorage.getItem("HP_checkout_total");
+
+    x= Number(x);
+
+    document.querySelector("#HP_pay2>p:nth-Child(1)").innerText=x;
+   
+    let Card_offer=document.querySelector("#HP_pay2>p:nth-Child(2)").innerText;
+
+    Card_offer=Number(Card_offer);
+
+    let finalamount=x+Card_offer;
+
+    document.querySelector("#total>p:nth-Child(2)").innerText=finalamount;
+
+    document.querySelector("#btn").addEventListener("click",orderplaced);
+    function orderplaced(){
+        window.location.href="./judicious-income-4437/confirmation/confirmation.html";
+    }
+</script>
