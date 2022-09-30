@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Deals</title>
+
+    <link rel="shortcut icon" href="https://m.geekbuying.com/favicon.ico">
+
+</head>
+
+<style>
+
+        #display {
+
+            width: 100%;
+            background-color: #f2f2f2;
+            padding-top: 50px;
+
+        }
+
+        #container {
+
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+
+        }
+
+        .item {
+
+            background-color: #fff;
+
+        }
+
+        .img1 {
+
+            width: 400px;
+            height: 400px;
+            display: inline-block;
+
+        }
+
+        .name {
+
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+            color: #666;
+            font-size: 18px;
+            line-height: 2  0px;
+            height: 40px;
+            overflow: hidden;
+            padding-left: 10px;
+
+        }
+
+        .price {
+
+            font-size: 18px;
+            font-weight: bold;
+            color: #d81414;
+            display: block;
+            padding-left: 10px;
+
+        }
+
+        .offer {
+
+            width: 88px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 17px;
+            font-weight: 500;
+            background-color: #d81414;
+            color: #fff;
+            text-align: center;
+            margin-left: 10px;
+
+        }
+
+        .max {
+
+            font-size: 12px;
+            color: #999;
+            height: 20px;
+            line-height: 20px;
+            display: block;
+            padding-left: 10px;
+
+        }
+
+        .label {
+
+            width: 98px !important;
+            height: 98px !important;
+
+        }
+
+</style>
+
+<body>
+
+    <div id="container"></div>
+    
+</body>
+</html>
+
+<script>
+
+let product = JSON.parse(localStorage.getItem('product'))
+
+console.log('product:', product)
+
+let container = document.getElementById('container')
+
+let div = document.createElement('div')
+
+let img = document.createElement('img')
+img.src = product.thumbnail
+img.className = 'img1'
+
+let brand = document.createElement('h3')
+brand.innerHTML = product.Brand
+
+let name = document.createElement('p')
+    name.innerHTML = product.name
+    name.className = 'name'
+
+    let offer = document.createElement('p')
+    offer.innerHTML = product.offer
+    offer.className = 'offer'
+
+    let MSRP = document.createElement('p')
+    MSRP.innerHTML = product.MSRP
+    MSRP.className = 'max'
+
+    let price = document.createElement('p')
+    price.innerHTML = product.price
+    price.className = 'price'
+
+    let review = document.createElement('p')
+    review.innerHTML = product.Reviews
+    review.className = 'review'
+
+    let code = document.createElement('p')
+    code.innerHTML = product.ItemCode
+    code.className = 'code'
+
+div.append(img, name, brand, offer, MSRP, price, review, code)
+
+container.append(div)
+
+// const startingMinutes = 10;
+    // let time = startingMinutes * 60;
+
+    // const timer = document.getElementById('timer');
+
+    // setInterval(updateTimer, 1000)
+
+    // function updateTimer() {
+
+    //     const minutes = Math.floor(time / 60);
+
+    //     let seconds = time % 60;
+
+    //     seconds = seconds < 10 ? '0' + seconds : seconds; 
+
+    //     timer.innerHTML = `${minutes}: ${seconds}`;
+
+    //     time--;
+
+    // }
+
+</script>
+
+

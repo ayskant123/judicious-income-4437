@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta title="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Deals</title>
+
+    <link rel="shortcut icon" href="https://m.geekbuying.com/favicon.ico">
+
+</head>
+
+    <style>
+
+        
+
+        #flash_deals {
+            
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            color: #d81414;
+            font-style: 36px;
+            font-weight: bold;
+            display: block;
+            padding: 20px 0px;
+            line-height: 48px;
+
+        }
+
+        #countdown>div {
+
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            color: #d81414;
+            font-style: 36px;
+            display: block;
+            padding: 20px 0px;
+            line-height: 48px;
+
+        }
+
+        #fd {
+
+            width: 100%;
+            /* border: 1px solid red; */
+
+        }
+
+        .deals {
+
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            width: 80%;
+            margin: auto;
+            /* border: 1px solid blue; */
+
+        }
+
+        .deals>div {
+
+            margin: auto;
+
+        }
+
+        img {
+
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            display: block;
+
+        }
+
+        p {
+
+            font-size: 14px;
+            margin: auto;
+            padding: 10px;
+
+        }
+
+        #countdown>div {
+
+            display: flex;
+            text-align: center;
+
+        }
+
+        h3 {
+
+            display: inline-flex;
+            font-size: 30px;
+            align-content: center;
+            justify-content: center;
+            margin: 22px ;
+
+        }
+
+        #countdown>div>div>p {
+
+            margin: -30px 0px 0px 0px;
+
+        }
+
+        #countdown>div>div>h3 {
+
+            width: 50px;
+            background-color: red;
+            color: white;
+            border-radius: 10px;
+
+        }
+
+        /* .deals>div>img {
+
+            
+        } */
+
+        #display {
+
+            width: 100%;
+            background-color: #f2f2f2;
+            padding-top: 50px;
+
+        }
+
+        #container {
+
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
+
+        }
+
+        .item {
+
+            background-color: #fff;
+
+        }
+
+        .img1 {
+
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+
+        }
+
+        .title {
+
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+            color: #666;
+            font-size: 14px;
+            line-height: 2  0px;
+            height: 40px;
+            overflow: hidden;
+            padding-left: 10px;
+
+        }
+
+        .price {
+
+            font-size: 18px;
+            font-weight: bold;
+            color: #d81414;
+            display: block;
+            padding-left: 10px;
+
+        }
+
+        .offer {
+
+            width: 88px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: #d81414;
+            color: #fff;
+            text-align: center;
+            margin-left: 10px;
+        }
+
+        .max {
+
+            font-size: 12px;
+            color: #999;
+            height: 20px;
+            line-height: 20px;
+            display: block;
+            padding-left: 10px;
+
+        }
+
+        .label {
+
+            width: 98px !important;
+            height: 98px !important;
+
+        }
+
+        
+
+    </style>
+
+<body>
+    
+    <div id="flash_deals">
+        <h1>Flash Deals</h1>
+    </div>
+
+    <div id="fd">
+
+        <div class="deals">
+
+            <div>
+                <img src="data:image/png;base64,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" alt="">
+                <p>Super Deals</p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmxTxS1HgcuzGRyLxe7h5j4rO_pHjzpyVXWg&usqp=CAU" alt="">
+                <p>All Flash Deals</p>
+            </div>
+            <div>
+                <img src="data:image/png;base64,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" alt="">
+                <p>Sports & Outdoors</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <p>Smart Home & Garden</p>
+            </div>
+            <div>
+                <img src="data:image/png;base64,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" alt="">
+                <p>Consumer Electronics</p>
+            </div>
+            <div>
+                <img src="data:image/png;base64,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" alt="">
+                <p>Phone & Accessories</p>
+            </div>
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAADpCAMAAABx2AnXAAAAe1BMVEX///8AAAD+/v7z8/OLi4siIiKpqak1NTX7+/vt7e1+fn5sbGyPj49wcHAEBASSkpLf399ISEjl5eW6urqampooKCjg4OCjo6NfX1/Jycl6enpDQ0PDw8OEhIRnZ2c7OztRUVGwsLDS0tIcHBxNTU0VFRVZWVkwMDAYGBhHOheuAAAJXElEQVR4nO2dC3uquhKGx8TSCUK5KnLxAm3t/v+/8CSToGjdy3Kqq+XZ8y5LrQTIl5kkQ2QlAAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMMzPIIT46SyMx+X537NOewSKSQHitjAgTfctzYcjtCXQvf3XRGiTTQuT5VvWEH8Q/au5kW0BKLP55AjmrbypXPqzCbJQN11tqsLErVp0Evbykzn9Ai+DDH5V2G/X5Dhl84vCJqJrwNct9r57ngS711HCZrPwj4l+DULkIy1W9VHKb8aEf8FYi+HvCEH68HawHezUse1UhZFZbJ7FpyxNWZi1mICrdx1TFtbf+ZrNJ2lTFjYQ89lkUxYGGLdFnhfZCibfeGjfQ3PHazKaBvvnVx0IvTztDgVSTRv0QxMTZnzODmaohQ2Y+hAvl0bywDmnJYxk6a3Mluch/Gx26FAM6tr0hJmNzP8hWS+9zczPLsNBVZuYMNIlRPCupfTCjEQy3jIDOUg4KWHmwgjepRu62vYaT9ZiJrsQz5y1PqpYf4bN9tUpS+5mMfJqamOP1ZZGX6kefwrgxFdG+T5pOQ7oChti4Nr64HuV0iiuTlOurUfOIpvm28LomhfHYN8mI17e3ghBw8njhCH1TlRU9rrZK1Wwl0LqT8D2Xqqy7vgW98q+LwyQJJzGXs2Liln3KxfDsoDjTWYH4c1pyTyIlTHOyyxCo5ROqF/qYJV5LjD+pjC8dsPg8nOvijiMJkwf3NWUiSdTbMc9CJ31z4U6DtV/T5gp/zKIzgmiOdVqiD/tyINytLQuMhcIcqT8tlZBZi7u0ZWDRmcNA3LQ1xjd90Lfc0VqOuafWt7ZrKAmJbuyJxgpC8EOXczeFXl9TgKWylx+Z/dsjJaS2sVZ6b5j+G4dM54SGJ+3gQB1leafRy7UuIbZbmySaKQwAYU9xZM0F3TjLqE0rUlizz03YuKadmQC71DHoBd2YRUjzCRqrlgsH/mlDQmjWmU6KVQh/RFRBUvslbXFEFPbCxQoxB2EUbsYXRlF9Uyb6Cx2plhbbJww54rGYlqMcFF9bvoSTOwp56Z41Zbe526g4Nt1TJ/yQhg5XEFV+MJi5KZjhYG2GDnck6lWKCu6mm9EQnKsYyBWe1uix7Gr7wnDf2k8vGvCrBP9fxabzV4VdVw2t3tp+sq6F2a6gSUpbuA+rmjKzdsll+wyapy6+tOe2htdx1p74F6Si3hWTGeyvtDnf0vq3IhpyVleOnfr8n1X1Dez8WcktSvyyp7bX8Nd0p/fhvbNKymozKXT0ynlGwWLdXqXkMpx5RkJGxj3AdHp8YQ/Ppdwnf4sbpgtdcFTbAMRFyL3LUwkxX1c8a9wKhVD7rq1uC9DU9Mzq+upsQdMRNgJY6RVbRveukQKqrUs2b5bM1YS8B63LX8Dcf5emA6bgpjZR1TSTtn4L7bHWZburmkKws6gjhP3MzfKsQs3ebTZLmcubsttmru54tWnmK7sgTs8Z2ZOkC5dZ3+CbHigO8+7xIp/HaSgIH2bnQVr9u0CBnfsUxPmiMPZpazXQJ59TTFJYShUsbQe2FevfSYHj7pNVZhp5rv86WS02ksF3c9PdVzRYVt5VW5qHV+9vuWdNKM8ZkRpkGSSwoYS6AOBF0OBExV2HD4lSe7vvm+2SQBHPg7xooX99HMex2d9+1FEN1529uVtf+s2Qtjvf4DFWjIaI0y3rAscfUv1E8iRdcy64rUo6hdhx77HNh7VJAymGeeKL7PEmwjbkRabCi5KvikMjbDpPWA6C28MH+mdsvrpTI6EzLC9NS6m45hpuaLh5QsWE2JyFiMW6o/2ojo2/+dpcrxXN4SZ73qlVHJamPzeMBh94TWRntkh6IvJyf2nN4ZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGOY/jxD9yy3z4ybrPf052PYTt/ZJXKLhsgeDOev60w6uBIMZBx88yYibl8zNzi3sLNZu1Q76RZ/aZVtsArsAynGLLrc0n7FbBUX0S1cJ94k4naA/2F3mQZORkBKTq64FtFPFu8l60U2Xjce5dO2P9NRxmrbjdNpOrM3r+QWgn4j3zOJDQz5GGLppUdsNOBeThYTIziuKNpcoImXXKtE/apEO1y2x+UXoDauPy1vRPtd1jZCGK9AbfbJ4m0LxFkqMdh8FyE0J+fMuSaBIFo+aGNHYSSnR+lIhSpAyXsTy0En9IQqpN+Z1iNH8NilXYYzSGEcqnVofiWbaHuUmxNVJqufCvCsrlPkyBhU9rUBGy7TcyqJCP9VFFy4zc+nMj0MV+A+RRUXcrsM0S6pklc8hzzfPfvSxzZqqypW/9stDGOfLsCvW20LmWz+rVnmk85+G27mqFuum24W+vzUzN8rOeHWWmWVacNNBW8xjaD3abNIiAK3t0HQoS6/VllZhmqbgzR8ijBY9iqIUshDzvI20MBkivCm18IukrBqINiuEPcYHmVbFQWIchj7NF74RKttCGTZ7fSTsO22kD2X2ZIVZi2UjOx+jtNsI2gQqXufrHIN8q61VmEVpskB7Sxp2DxKmX6rdxNkGvICEqYWERMVhW3apr10p23S4l00IMqgqXcfCTWiyv/EA8gBWYbOGooV1qXd1NJl2lmvjBRmsd36ySBK/XiS1X69lXKxXZveChIHyzSF+9pjWg1bdW8mNZ4TNm0qFkdL1PIlVlUGZVh10Ms8xSeO3NF5kb6lqqnTb6iOzLXZdLbPKCMtIGAC1Nk0BEC+UUEr5jUpVVdIGpN+A7EQQAHhaWOnrOlplj1AF1J6h8OotNhG0OS4OGw+rddrWzSrcRSqKIUu00M0hLt/2DTTJupkrGXZ+qtu3DXrJdhWH0Gagi4DaIaENpU8X2AznKy00N6st5bo2FQjxejdHud7tFqhbRojq+uPwKGW9J+DFb7f/86fiGJ6cYhLhFiU6rYfZ9yP9cml23ScxPOdjJwo79rw2QEBnRbvqGC07ZuODQfxwXCmiDz9Oa2K49dL607owxKWAY59ufyPC+Qqad8QGQWCXOENbR2yEhS4+oimm+xjPJjoFSWBXM8V+7U+wyqAvqH6ZESe0j036md36onwAg4xZfbbIqRjtzPvogkh0YR+6+A9sLGkDSuwrmOhnaoaztQL72BFEHwkfbTkuWPwfAxac9jKHORYAAAAASUVORK5CYII=" alt="">
+                <p>TV Boxes & Mini PCs</p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2DZ7N-JDe9toFFc_K-EY77cafl9Jck8bn9g&usqp=CAU" alt="">
+                <p>Computers, Tablets & Accesories</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <p>Toys & Hobbies</p>
+            </div>
+            <div>
+                <img src="data:image/png;base64,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" alt="">
+                <p>Wearable Devices</p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbI2jSPH0KrMIyWnjDqb_jk-Ek6vPfDXpvPA&usqp=CAU" alt="">
+                <p>Security Systems</p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkd5nhgVpD0cYhpyY_L0504NEcvvwjJdGGEg&usqp=CAU" alt="">
+                <p>Automobiles & Motorcycles</p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-xcLkTl7FVpHFQMvwqdC9LFTr6IV4WTRmpA&usqp=CAU" alt="">
+                <p>Fashion</p>
+            </div>
+
+        </div>
+
+        <div id="countdown">
+
+            <div>
+                <h1>On Sale Now</h1>
+                <div>
+                    <h3 class="day"></h3>
+                    <p>Day</p>
+                </div>
+                <div>
+                    <h3 class="hour"></h3>
+                    <p>Hour</p>
+                </div>
+                <div>
+                    <h3 class="minute"></h3>
+                    <p>Minute</p>
+                </div> 
+                <div>
+                    <h3 class="second"></h3>
+                    <p>Second</p>
+                </div>
+            </div> 
+
+        </div>
+
+    </div>
+
+    <div id="display">
+
+        <div id="container"></div>
+    
+    </div>
+
+
+</body>
+</html>
+
+
+<script>
+
+    const countdown = () => {
+
+        const countdate = new Date('05 October, 2022 00:00').getTime()
+
+        const now = new Date().getTime()
+
+        const gap = countdate - now
+
+        const second = 1000
+
+        const minute = second * 60
+
+        const hour = minute * 60
+
+        const day = hour * 24
+
+        //Calculate the countdown
+
+        const textDay = Math.floor(gap / day)
+
+        const textHour = Math.floor((gap % day) / hour)
+
+        const textMinute = Math.floor((gap % hour) / minute)
+
+        const textSecond = Math.floor((gap % minute) / second)
+
+        document.querySelector('.day').innerHTML = textDay+':'
+        document.querySelector('.hour').innerHTML = textHour+':'
+        document.querySelector('.minute').innerHTML = textMinute+':'
+        document.querySelector('.second').innerHTML = textSecond
+
+        
+
+    }
+
+    setInterval(countdown, 1000)
+
+
+
+    let afndealOfDay = [
+
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-04-29/8BitDo-Pro-2-Bluetooth-Gamepad-Controller-with-Joystick-Grey-500076-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "8BitDo Pro 2 Bluetooth Controller with Joystick for",
+        offer: "22% OFF",
+        MSRP: 5283.93,
+        price: 4127.89,
+        Brand: "8 Bitdo",
+        Reviews: 4.84,
+        ItemCode: 500076
+    },
+
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-05-24/Geek-Chef-Steam-Air-Fryer-Toast-Oven-Combo-501237-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "Geek Chef Steam Air Fryer Toast Oven Combo, 26 QT Steam Convection Oven Countertop 50 Cooking Presets",
+        offer: "30% OFF",
+        MSRP: 24771.46,
+        price: 17339.78,
+        Brand: "7 Fitdo",
+        Reviews: 4.84,
+        ItemCode: 501237
+    }, 
+    
+    {
+        thumbnail:"https://img.gkbcdn.com/s3/p/2022-08-25/NEJE-3-MAX-E40-Laser-Engraver-Cutter-515937-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title:  "NEJE 3 MAX 11W+ Laser Engraver Cutter, E40 Laser Module, 0.06x0.06mm Fixed Focus, Built-in Air Assist, NEJE WIN Software, Android App Control, 460*810mm",
+        offer: "22% OFF",
+        MSRP: 54745.94,
+        price: 42856.06,
+        Brand: "NEJE",
+        Reviews: 4.94,
+        ItemCode:515937
+    }, 
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-08-19/Vicesat-VS04-Electric-Scooter-2-1000W-Motor-without-Seat-515197-2.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "Vicesat VS04 Electric Scooter 10 Inch 2*1000W Motor 52V 24Ah Battery 65Km/h Max Speed 60Km Range 150KG Max Load",
+        offer: "22% OFF",
+        MSRP:29808.50,
+        price: 26422.95,
+        Reviews: 5.94,
+        ItemCode:481345
+    }, 
+    
+    {
+        thumbnail:"https://img.gkbcdn.com/p/2021-12-13/aovo-q7-folding-electric-scooter-8-5--350w-10-4ah-bms-battery-black-a100d6-1639394632942._w500_p1_.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label28.png?20220923",
+        title:  " Anti-skid solid tire 350W Motor 36V 10.5Ah Battery 3 Speed Modes Rear Disc Brake Max Speed 25KM/h LCD Display 25KM Long Range Aluminum Alloy Frame Support Bluetooth APP - Blac",
+        offer: "11% OFF",
+        MSRP: 108584.38,
+        price: 189838.32 ,
+        Reviews: 0,
+        ItemCode:507320
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-07-01/ZENDURE-SuperBase-Pro-2096Wh-Portable-Power-Station-US-Plug-507320-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "ZENDURE SuperBase Pro 2000 Portable Power Station 2096Wh Large Capacity 3000W Ampup Capability, 14 Outputs, 6.1 Inch Clear Display, Built-in 4G IoT, App Control, Charge to 80% in 1 Hour, with Industrial-Grade Wheels - US Plug",
+        offer: "11% OFF",
+        MSRP: 108584.38,
+        price: 189838.32 ,
+        Reviews: 0,
+        ItemCode:508320
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-07-01/ZENDURE-SuperBase-Pro-2096Wh-Portable-Power-Station-US-Plug-507320-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "Tronsmart Element T6 Mini 15W Bluetooth 5.0 Speaker 30m Connection Siri Google Assistant IPX6 24H Playtime USB-C - Black",
+        offer: "29% OFF",
+        MSRP: 2889.27,
+        price: 2063.53 ,
+        Reviews: 0,
+        ItemCode:420107
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-05-24/Geek-chef-Espresso-Maker-501240-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "Geek Chef GCF20C Bar Espresso Maker Coffee Machine 950W Detachable Frothing Nozzle,1.5L Detachable Transparent Water Tank Coffee Maker",
+        offer: "20% OFF",
+        MSRP: 12385.32,
+        price: 9908.09  ,
+        Reviews: 0,
+        ItemCode:501240
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-03-07/TrekPow-296WH-80000mAh-Portable-Power-Station-Solar-Generator-497367-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title:"TrekPow 296WH 80000mAh Portable Power Station Solar Generator for Outdoor Camping Travel Hunting RV CPAP Home Emergency",
+        offer: "12%  OFF",
+        MSRP: 22541.96,
+        price: 19817.0 ,
+        Reviews: 0,
+        ItemCode:497367
+    },
+
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-07-01/ZENDURE-SuperBase-Pro-2096Wh-Portable-Power-Station-US-Plug-507320-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "Daysky V14S 14.1 inch Laptop Intel Celeron N5095 12GB LPDDR4 512G SSD 1080P FHD with Backlight Windows 10 - Silver",
+        offer: "11% OFF",
+        MSRP: 34184.93,
+        price: 27248.69  ,
+        Reviews: 0,
+        ItemCode:516104
+    },
+    
+    {
+        thumbnail: "	https://img.gkbcdn.com/s3/p/2021-11-04/QIDI-TECH-i-Fast-3D-Printer-476697-0.jpg",
+        // lableImg: "	https://img.gkbcdn.com/s3/l/label/Label28.png?20220923",
+        title: "QIDI i Fast 3D Printer, Industrial Grade Structure, Dual Extruder for Fast Printing, 360x250x320mm",
+        offer: "31% OFF",
+        MSRP:231207.21 ,
+        price: 159285.82 ,
+        Reviews: 4.97,
+        ItemCode:476697
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2019-03-18/tronsmart-e…t6-plus-bluetooth-speaker-black-1571991425316.jpg",
+        // lableImg: "	https://img.gkbcdn.com/s3/l/label/Label12.png?20220923",
+        title: "Tronsmart Element T6 Plus Portable Bluetooth 5.0 Speaker with 40W Max Output, Deep Bass, IPX6 Waterproof, TWS - Black",
+        offer: "21% OFF",
+        MSRP:6605.12,
+        price:  3962.74 ,
+        Reviews: 0,
+        ItemCode:416581
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2019-10-24/a95x-f3-air…8k-video-decode-tv-box-4gb-32gb-1574132894243.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "A95X F3 Air Amlogic S905x3 Android 9.0 8K Video Decode TV Box RGB Light 4GB/32GB 2.4G+5G MIMO WiFi Bluetooth LAN USB3.0 4K Youtube",
+        offer: "15% OFF",
+        MSRP: 2500.38,
+        price: 2200.32 ,
+        Reviews: 0,
+        ItemCode:422217
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-04-29/8BitDo-Pro-2-Bluetooth-Gamepad-Controller-with-Joystick-Grey-500076-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "8BitDo Pro 2 Bluetooth Controller with Joystick for Nintendo Switch, PC, macOS, Android, Steam & Raspberry Pi - Grey",
+        offer: "22% OFF",
+        MSRP: 5283.93,
+        price: 4127.89,
+        Brand: "8 Bitdo",
+        Reviews: 4.84,
+        ItemCode: 500076
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-05-24/Geek-Chef-Steam-Air-Fryer-Toast-Oven-Combo-501237-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "Geek Chef Steam Air Fryer Toast Oven Combo, 26 QT Steam Convection Oven Countertop 50 Cooking Presets",
+        offer: "30% OFF",
+        MSRP: 24771.46,
+        price: 17339.78,
+        Brand: "7 Fitdo",
+        Reviews: 4.84,
+        ItemCode: 501237
+    }, 
+    
+    {
+        thumbnail:"https://img.gkbcdn.com/s3/p/2022-08-25/NEJE-3-MAX-E40-Laser-Engraver-Cutter-515937-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title:  "NEJE 3 MAX 11W+ Laser Engraver Cutter, E40 Laser Module, 0.06x0.06mm Fixed Focus, Built-in Air Assist, NEJE WIN Software, Android App Control, 460*810mm",
+        offer: "22% OFF",
+        MSRP: 54745.94,
+        price: 42856.06,
+        Brand: "NEJE",
+        Reviews: 4.94,
+        ItemCode:515937
+    }, 
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-08-19/Vicesat-VS04-Electric-Scooter-2-1000W-Motor-without-Seat-515197-2.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "Vicesat VS04 Electric Scooter 10 Inch 2*1000W Motor 52V 24Ah Battery 65Km/h Max Speed 60Km Range 150KG Max Load",
+        offer: "22% OFF",
+        MSRP:29808.50,
+        price: 26422.95,
+        Reviews: 5.94,
+        ItemCode:481345
+    }, 
+    
+    {
+        thumbnail:"https://img.gkbcdn.com/p/2021-12-13/aovo-q7-folding-electric-scooter-8-5--350w-10-4ah-bms-battery-black-a100d6-1639394632942._w500_p1_.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label28.png?20220923",
+        title:  " Anti-skid solid tire 350W Motor 36V 10.5Ah Battery 3 Speed Modes Rear Disc Brake Max Speed 25KM/h LCD Display 25KM Long Range Aluminum Alloy Frame Support Bluetooth APP - Blac",
+        offer: "11% OFF",
+        MSRP: 108584.38,
+        price: 189838.32 ,
+        Reviews: 0,
+        ItemCode:507320
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-07-01/ZENDURE-SuperBase-Pro-2096Wh-Portable-Power-Station-US-Plug-507320-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "ZENDURE SuperBase Pro 2000 Portable Power Station 2096Wh Large Capacity 3000W Ampup Capability, 14 Outputs, 6.1 Inch Clear Display, Built-in 4G IoT, App Control, Charge to 80% in 1 Hour, with Industrial-Grade Wheels - US Plug",
+        offer: "11% OFF",
+        MSRP: 108584.38,
+        price: 189838.32 ,
+        Reviews: 0,
+        ItemCode:508320
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-07-01/ZENDURE-SuperBase-Pro-2096Wh-Portable-Power-Station-US-Plug-507320-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "Tronsmart Element T6 Mini 15W Bluetooth 5.0 Speaker 30m Connection Siri Google Assistant IPX6 24H Playtime USB-C - Black",
+        offer: "29% OFF",
+        MSRP: 2889.27,
+        price: 2063.53 ,
+        Reviews: 0,
+        ItemCode:420107
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-05-24/Geek-chef-Espresso-Maker-501240-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "Geek Chef GCF20C Bar Espresso Maker Coffee Machine 950W Detachable Frothing Nozzle,1.5L Detachable Transparent Water Tank Coffee Maker",
+        offer: "20% OFF",
+        MSRP: 12385.32,
+        price: 9908.09  ,
+        Reviews: 0,
+        ItemCode:501240
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-03-07/TrekPow-296WH-80000mAh-Portable-Power-Station-Solar-Generator-497367-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title:"TrekPow 296WH 80000mAh Portable Power Station Solar Generator for Outdoor Camping Travel Hunting RV CPAP Home Emergency",
+        offer: "12%  OFF",
+        MSRP: 22541.96,
+        price: 19817.0 ,
+        Reviews: 0,
+        ItemCode:497367
+    },
+
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2022-07-01/ZENDURE-SuperBase-Pro-2096Wh-Portable-Power-Station-US-Plug-507320-0.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "Daysky V14S 14.1 inch Laptop Intel Celeron N5095 12GB LPDDR4 512G SSD 1080P FHD with Backlight Windows 10 - Silver",
+        offer: "11% OFF",
+        MSRP: 34184.93,
+        price: 27248.69  ,
+        Reviews: 0,
+        ItemCode:516104
+    },
+    
+    {
+        thumbnail: "	https://img.gkbcdn.com/s3/p/2021-11-04/QIDI-TECH-i-Fast-3D-Printer-476697-0.jpg",
+        // lableImg: "	https://img.gkbcdn.com/s3/l/label/Label28.png?20220923",
+        title: "QIDI i Fast 3D Printer, Industrial Grade Structure, Dual Extruder for Fast Printing, 360x250x320mm",
+        offer: "31% OFF",
+        MSRP:231207.21 ,
+        price: 159285.82 ,
+        Reviews: 4.97,
+        ItemCode:476697
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2019-03-18/tronsmart-e…t6-plus-bluetooth-speaker-black-1571991425316.jpg",
+        // lableImg: "	https://img.gkbcdn.com/s3/l/label/Label12.png?20220923",
+        title: "Tronsmart Element T6 Plus Portable Bluetooth 5.0 Speaker with 40W Max Output, Deep Bass, IPX6 Waterproof, TWS - Black",
+        offer: "21% OFF",
+        MSRP:6605.12,
+        price:  3962.74 ,
+        Reviews: 0,
+        ItemCode:416581
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/s3/p/2019-10-24/a95x-f3-air…8k-video-decode-tv-box-4gb-32gb-1574132894243.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "A95X F3 Air Amlogic S905x3 Android 9.0 8K Video Decode TV Box RGB Light 4GB/32GB 2.4G+5G MIMO WiFi Bluetooth LAN USB3.0 4K Youtube",
+        offer: "15% OFF",
+        MSRP: 2500.38,
+        price: 2200.32 ,
+        Reviews: 0,
+        ItemCode:422217
+    },
+    
+    {
+        thumbnail: "https://img.gkbcdn.com/p/2019-10-11/jjrc-x12-4k-gp…wo-batteries-with-bag-1574132236117._w500_p1_.jpg",
+        // lableImg: "https://img.gkbcdn.com/s3/l/label/Label15.png?20220923",
+        title: "JJRC X12 AURORA 4K 5G WIFI 3KM FPV GPS Foldable RC Drone With 3Axis Gimbal 50X Digital Zoom Ultrasonic Positioning RTF - White Two Batteries with Bag",
+        offer: "11% OFF",
+        MSRP: 27248.69,
+        price:  17339.78 ,
+        Reviews: 4.98,
+        ItemCode:420306
+    }
+
+]
+
+let container = document.getElementById('container')
+
+// console.log('data:', afndealOfDay)
+
+for (let i=0; i<afndealOfDay.length; i++) {
+
+    let div = document.createElement('div')
+    div.className = 'item'
+    div.onclick = function() {
+        clicked(afndealOfDay[i])
+    }
+
+    let img = document.createElement('img')
+    img.src = afndealOfDay[i].thumbnail
+    img.className = 'img1'
+
+    let label = document.createElement('img')
+    label.src = afndealOfDay[i].lableImg
+    label.className = 'label'
+
+    let title = document.createElement('p')
+    title.innerHTML = afndealOfDay[i].title
+    title.className = 'title'
+
+    let offer = document.createElement('p')
+    offer.innerHTML = afndealOfDay[i].offer
+    offer.className = 'offer'
+
+    let MSRP = document.createElement('p')
+    MSRP.innerHTML = afndealOfDay[i].MSRP
+    MSRP.className = 'max'
+
+    let price = document.createElement('p')
+    price.innerHTML = afndealOfDay[i].price
+    price.className = 'price'
+
+    let review = document.createElement('p')
+    review.innerHTML = afndealOfDay[i].Reviews
+    review.className = 'review'
+
+    let code = document.createElement('p')
+    code.innerHTML = afndealOfDay[i].ItemCode
+    code.className = 'code'
+
+    div.append(img, title, price, MSRP, offer,)
+
+    container.append(div)
+
+}
+
+function clicked(div) {
+
+    localStorage.setItem('product', JSON.stringify(div))
+
+    window.location.href = './appended.html'
+
+}
+
+</script>
