@@ -135,9 +135,9 @@ let item_obj=JSON.parse(localStorage.getItem("BuyData"))
    function buyNow(){
    let BuyNow=localStorage.setItem("BuyData",JSON.stringify(item_obj))
     console.log(BuyNow)
-    window.location.href="../judicious-income-4437/shipping.html"
+    window.location.href="shipping.html"
     }
 
     let nav_logo = document.getElementById("nav_logo").addEventListener("click",function(){
-        window.location.href ="../judicious-income-4437/index.html"
+        window.location.href ="index.html"
       })

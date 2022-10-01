@@ -20,3 +20,6 @@ submit=()=>{
     window.location.href="signin.html"
     }
    
+    let nav_logo = document.getElementById("nav_logo").addEventListener("click",function(){
+        window.location.href ="index.html"
+      })

@@ -5,139 +5,139 @@ let container = document.getElementById("BS_new_append");
 
 let BS_new_data = [
     {
-        img: "../judicious-income-4437/new_page/img1.jpg",
+        img: "./new_page/img1.jpg",
         title: 'Creativity Ender 3 S1 3D Original Heater Block Silicone',
         price: 2.04,
 
     },
     {
-        img: "../judicious-income-4437/new_page/img2.jpg",
+        img: "./new_page/img2.jpg",
         title: 'Creativity Ender 3 S1 3DOriginal Heater Block Silicone',
         price: 31.07,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img3.jpg",
+        img: "./new_page/img3.jpg",
         title: 'Spare Part for NAVEE N65 CAR Truck',
         price: 70.94,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img4.jpg",
+        img: "./new_page/img4.jpg",
         title: 'JJRC H106 RC Drone Spare Parts 4PCS Protective Frame',
         price: 41.10,
         
     },{
-        img: "../judicious-income-4437/new_page/img5.jpg",
+        img: "./new_page/img5.jpg",
         title: 'JJRC H106 RC Drone Spare Parts 2PCS CW CCW Propeller',
         price: 6.10,
         
     },{
-        img: "../judicious-income-4437/new_page/img6.jpg",
+        img: "./new_page/img6.jpg",
         title: 'Creativity Ender-3 S1 24V 40W Heater Thermistor Heating Rod',
         price: 99.13,
         
     },{
-        img: "../judicious-income-4437/new_page/img7.jpg",
+        img: "./new_page/img7.jpg",
         title: 'Robot Vacuum Cleaner Accessories Cleaning Mop',
         price: 22.13,
         
     },{
-        img: "../judicious-income-4437/new_page/img8.jpg",
+        img: "./new_page/img8.jpg",
         title: 'JJRC H106 RC Drone Spare Parts CCW Motor',
         price: 88.13,
         
     },{
-        img: "../judicious-income-4437/new_page/img9.jpg",
+        img: "./new_page/img9.jpg",
         title: 'JJRC H106 RC Drone Spare Parts CW Motor',
         price: 11.13,
         
     },{
-        img: "../judicious-income-4437/new_page/img10.jpg",
+        img: "./new_page/img10.jpg",
         title: 'Creativity V6 to CR10 J-head Hot End Aluminum Bracket,',
         price: 27.13,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img11.jpg",
+        img: "./new_page/img11.jpg",
         title: 'Solid Color Finger Strap Phone Protective Shell for iPhone 14',
         price: 6.15,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img12.jpg",
+        img: "./new_page/img12.jpg",
         title: 'TWO TREES Dual Drive Gear Extruder Kit Cloned Btech',
         price: 9.15,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img13.jpg",
+        img: "./new_page/img13.jpg",
         title: 'OOLACTIVE GF-1202 340z Water Bottle with Straw',
         price: 24.18,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img14.jpg",
+        img: "./new_page/img14.jpg",
         title: 'Y80 Bluetooth 5.1 TWS Earphone Wireless Digital',
         price: 49.18,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img15.jpg",
+        img: "./new_page/img15.jpg",
         title: 'F6D TWS Earbuds Touch Bluetooth 5.0 True Wireless',
         price: 7.18,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img16.jpg",
+        img: "./new_page/img16.jpg",
         title: 'F6D TWS Earbuds Touch Bluetooth 5.0 True Wireless',
         price: 62.18,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img17.jpg",
+        img: "./new_page/img17.jpg",
         title: 'F6S Wireless TWS Bluetooth 5.2 Sports Stereo In-Ear',
         price: 77.18,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img18.jpg",
+        img: "./new_page/img18.jpg",
         title: 'Roller Brush for Proscenic P10 P11 Cordless Vacuum Cleaner',
         price: 90.21,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img19.jpg",
+        img: "./new_page/img19.jpg",
         title: 'Y70 Bluetooth 5.1 Wireless Earphone TWS In-Ear Earbuds',
         price: 101.21,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img20.jpg",
+        img: "./new_page/img20.jpg",
         title: 'OOLACTIVE LF-0402 Bike Phone Front Frame Bag Bicycle',
         price: 200.24,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img21.jpg",
+        img: "./new_page/img21.jpg",
         title: 'Home&Styling Folding Kitchen Scales Stainless Steel White',
         price: 105.21,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img22.jpg",
+        img: "./new_page/img22.jpg",
         title: 'Smart Voice-Activated Luminous Phone Case, Anti-Fal',
         price: 55.26,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img23.jpg",
+        img: "./new_page/img23.jpg",
         title: 'Jimmy JV53/JV51/JV83/JV65/JV63/JV',
         price: 35.26,
         
     },
     {
-        img: "../judicious-income-4437/new_page/img23.jpg",
+        img: "./new_page/img23.jpg",
         title: 'HINOVO MPC1-IP 14 Strong Magnetic Charging Mobile',
         price: 22.26,
         
@@ -263,7 +263,7 @@ const filter = (BS_new_append) => {
 filter(BS_new_data);
 
 let nav_logo = document.getElementById("nav_logo").addEventListener("click",function(){
-    window.location.href ="../judicious-income-4437/index.html"
+    window.location.href ="./index.html"
   })
 
 

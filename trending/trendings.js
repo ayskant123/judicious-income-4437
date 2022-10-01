@@ -87,12 +87,12 @@ function appendItem(Info)
    function buyNow(index){
    let BuyNow=localStorage.setItem("BuyData",JSON.stringify(data[index]))
     console.log(BuyNow)
-    window.location.href="../judicious-income-4437/details.html"
+    window.location.href="details.html"
     }
   
 
     
     
     let nav_logo = document.getElementById("nav_logo").addEventListener("click",function(){
-        window.location.href ="../judicious-income-4437/index.html"
+        window.location.href ="index.html"
       })

@@ -7,11 +7,11 @@
     <title>Payment</title>
     <link rel="shortcut icon" type="image/ico" href="https://m.geekbuying.com/favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../judicious-income-4437/payments/payment.css">
+    <link rel="stylesheet" href="./payments/payment.css">
 </head>
 <body>
     <div id="HP_cartnavbar">
-        <img src="https://content1.geekbuying.com/V1.4/en/images/indexV7/Geekbuying.png" alt="">
+        <img id="nav_logo" src="https://content1.geekbuying.com/V1.4/en/images/indexV7/Geekbuying.png" alt="">
         <hr>
         <h4>Secure Checkout</h4>
     </div>
@@ -38,7 +38,7 @@
             <input type="number" placeholder="Enter CVV">
            <p>Your card details will be saved securely for future transactions, based on the industry standards. <u>Terms & condition</u></p>
 
-           <a href="../judicious-income-4437/confirmation.html"><button id="btn">Make Payment</button></a>
+           <a href="confirmation.html"><button id="btn">Make Payment</button></a>
            
         </div>
 
@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    <div id="HP_Footer"> <img src="https://content1.geekbuying.com/V1.4/en/images/shopcart_footicon.png" alt=""></div>
+    <div id="HP_Footer"> <img id="nav_logo" src="https://content1.geekbuying.com/V1.4/en/images/shopcart_footicon.png" alt=""></div>
 </body>
 </html>
 
@@ -91,6 +91,11 @@
 
     document.querySelector("#btn").addEventListener("click",orderplaced);
     function orderplaced(){
-        window.location.href="./judicious-income-4437/confirmation.html";
+        window.location.href="confirmation.html";
     }
+
+    let nav_logo = document.getElementById("nav_logo").addEventListener("click",function(){
+        window.location.href ="index.html"
+      })
+
 </script>

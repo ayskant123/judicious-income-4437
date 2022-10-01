@@ -132,10 +132,12 @@ let pro = document.getElementById("HP_product")
     }
 
     document.querySelector("#proceed").addEventListener("click",function(){
-        window.location.href="../shipping/shipping.html"
+        window.location.href="shipping.html"
     });
 
     let nav_logo = document.getElementById("nav_logo").addEventListener("click",function(){
-        window.location.href ="../judicious-income-4437/index.html"
+        window.location.href ="index.html"
       })
+
+
 

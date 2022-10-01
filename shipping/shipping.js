@@ -12,7 +12,11 @@ red.innerText = "$ "+x
 localStorage.setItem("HP_final_Total",JSON.stringify(x))
 
 document.querySelector("#HP_Place_order_btn").addEventListener("click",function(){
-   window.location.href="./payments/payments.html"
+   window.location.href="payments.html"
 });
 
 // total.innerText=null
+
+let nav_logo = document.getElementById("nav_logo").addEventListener("click",function(){
+   window.location.href ="index.html"
+ })
