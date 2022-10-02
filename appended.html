@@ -12,11 +12,471 @@
 
 <style>
 
+    /* css of navbar */
+
+        #second_dropbtn_btn {
+
+        background-color: rgb(20,118,254);
+        color: white;
+        padding: 8px;
+        font-size: 14px;
+        border: none;
+
+        }
+
+        #third_dropbtn_btn {
+
+        background-color: rgb(20,118,254);
+        color: white;
+        padding: 8px;
+        font-size: 14px;
+        border: none;
+
+        }
+
+        #second_dropdwn {
+
+        position: relative;
+        display: inline-block;
+
+        }
+        #third_dropdwn {
+
+        position: relative;
+        display: inline-block;
+
+        }
+
+        .dropdown-content {
+
+        display: none;
+        position: absolute;
+        background-color: white;
+        width: 120px;    
+        height: 250px;
+
+        }
+
+        .dropdown-content a {
+
+        color: black;
+        padding: 8px 8px;
+        text-decoration: none;
+        display: block;
+        font-size: 13px;
+
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        #second_dropdwn:hover .dropdown-content {display: block;}
+        #third_dropdwn:hover .dropdown-content {display: block;}
+
+        #second_dropdwn:hover #second_dropbtn_btn {background-color: rgb(20,118,254);;}
+        #third_dropdwn:hover #third_dropbtn_btn {background-color: rgb(20,118,254);;}
+
+        #top_navbar {
+
+        height: 150px;
+        background-color: rgb(20,118,254);
+        color: white;
+
+        }
+
+        #top_options {
+
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid rgb(211, 195, 195);
+
+        }
+
+        #top_options>div {
+
+        margin-right: 60px;
+
+        }
+
+        #first_dropdwn {
+
+        font-size: 14px;
+        margin-top: 8px;
+        position: relative;
+
+        }
+
+        #BB_main {
+
+        width: 85%;
+        margin: auto;
+
+        }
+
+        #qr_code_div {
+
+        display: flex;      
+
+        }
+
+        #second_qr_code_div>img {
+
+        display: block;
+        margin-top: 6px;
+        margin-left: 7px;
+
+        }
+
+        #first_dropdwn_main {
+
+        display: none;
+        right: 15px;
+        position: absolute;
+        top: 25px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        }
+
+        #first_dropdwn:hover #first_dropdwn_main {
+
+        display: block;  
+        background-color: white;
+        color: gray;
+        border-radius: 10px;
+        padding: 10px;
+
+        }
+
+        #first_dropdwn_mainn>div {
+
+        margin-bottom: 6px;
+
+        }
+
+
+        #first_dropdwn_mainn {
+
+        width: 95%;
+        text-align: center;
+
+        }
+
+
+        #top_navbar_second {
+
+        width: 90%;
+        margin: auto;
+        display: flex;
+        height: 40px;
+        margin-top: 20px;
+
+        }
+
+        #top_navbar_second_img {
+
+        width: 18%;
+        border: 1px solid transparent;
+        margin-right: 2%;
+
+        }
+
+        #top_navbar_second_img>img {
+
+        width: 100%;
+
+        }
+
+        #top_navbar_second_search {
+
+        width: 50%;
+        background-color: white;
+        border-radius: 7px;
+
+        }
+
+        #top_navbar_second_address {
+
+        width: 9%;
+        border: 1px solid transparent;
+        margin-left: 2%;
+        /* position: relative; */
+
+        }
+
+        #top_navbar_second_address:hover #shipToBox {
+
+        display: block;
+
+        }
+
+        #top_navbar_second_user {
+
+        width: 9%;
+        border: 1px solid transparent;
+        margin-left: 2%;
+        display: flex;
+
+        }
+
+        #top_navbar_second_user>p {
+
+        margin-top: 10px;
+        font-size: 12.5px;
+        margin-left: 5px;
+
+        }
+
+        #top_navbar_second_user>img {
+
+        border-radius: 50%;
+
+        }
+
+        #top_navbar_second_cart{
+
+        width: 9%;border: 1px solid transparent;
+        margin-left: 1%;
+
+        }
+
+        #top_navbar_second_search>select {
+
+        height: 39px;
+        text-align: center;
+        color: gray;
+        font-size: 13px;
+        width: 25%;border: none;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+            
+        }
+
+        #top_navbar_second_search>input {
+        border: none;
+        border-left: 1px solid gray;
+        background-color: white;
+        outline: none;
+        padding-left: 15px;
+
+        }
+
+        #top_navbar_second_address>p {
+
+        font-size: 12px;
+
+        }
+
+        #top_navbar_second_address>div>img{
+
+        width: 10%;
+        margin-right: 8px;
+        background-color: green;
+            
+
+        }
+
+        #top_navbar_second_address>div {
+
+        display: flex;
+        margin-top: 5px;
+            
+        }
+
+        #top_navbar_second_cart>img {
+
+        width: 30%;
+        margin-left: 20px;
+        margin-top: 5px;
+            
+        }
+
+        #top_navbar_last {
+
+        display: flex;
+        margin-top: 30px;
+        /* position: relative; */
+        
+        }
+
+        #top_navbar_last>div {
+
+        margin-left: 45px;
+
+        }
+
+        #top_category {
+
+        position: absolute;
+
+        }
+
+        #drop_category {
+
+        display: none;
+        background-color: white;
+        color: gray;
+        width: 250px;
+        top: 150px;
+        overflow: scroll;
+        height: 400px;            
+        /* position: absolute; */
+
+        }
+
+        #drop_category::-webkit-scrollbar {
+
+        display: none;
+
+        }
+
+        #drop_category>p {
+
+        margin-top: 10px;
+        padding-left: 5px;
+        margin-top: 20px;
+
+        }
+
+        #drop_category>p:nth-child(1) {
+
+        margin-top: 15px;
+
+        }
+
+        #top_category:hover {
+
+        /* position: fixed; */
+        cursor: pointer;
+
+        }
+
+        /* #top_category:hover #all_options_categories {
+
+        margin-right: -100px;
+
+        } */
+
+        #top_category:hover #drop_category {
+
+            display: block;
+
+        }
+
+        #all_options_categories {
+
+            width: 50%;
+            display: flex;
+            justify-content:space-between;
+            
+        }
+
+        #all_options_categories>div {
+
+            margin-left: 50px;
+
+        }
+
+        #all_options_categories>div:nth-child(1) {
+
+            margin-left: 120px;
+
+        }
+
+        #shipToBox {
+
+            width: 280px;
+            height: 180px;
+            padding-top: 10px;
+            padding-left: 35px;        
+            /* position: absolute; */
+            display: none;        
+            /* background-color: white; */
+            
+        }
+
+        #BB_test {
+                
+            border-radius: 8px;
+            position: absolute;
+            left: 700px;
+            top: 100px;
+            background-color: white;
+            color: black;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            
+        }
+
+        #shipToBox>p:nth-child(2) {
+                
+            font-size: 13.5px;
+            margin-top: 5px;
+            margin-bottom: -5px;
+            color: black;
+            
+        }
+
+        #shipToBox>select:nth-child(3) {
+                
+            height: 30px;
+            width: 200px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin-top: 10px;
+            color: gray;
+
+        }
+
+        #shipToBox>select:nth-child(5) {
+            height: 30px;
+            width: 200px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin-top: 5px;
+            color: gray;
+
+        }
+
+        #shipToBox>p:nth-child(4) {
+                
+            font-size: 14px;
+            margin-top: 10px;
+                
+
+        }
+
+        #shipToBox>:nth-last-child(1) {
+                
+            display: block;
+            padding:4px 25px;
+            margin-left: 55px;
+            margin-top: 5px;
+            font-size: 15px;
+            background-color: rgb(20,118,254);
+            color: white;
+            border-radius: 5px;
+            border: none;
+
+        }
+
+        #shipToBox>:nth-last-child(1):hover {
+
+            cursor: pointer;
+
+        }
+            
+        .country_select {
+
+            text-align: center;
+
+        }
+
+        /* css of middle section */
+
         #display {
 
             width: 100%;
-            background-color: #f2f2f2;
-            padding-top: 50px;
+            /* background-color: #f2f2f2; */
+            /* padding-top: 50px; */
+            margin: 70px 0px 70px 0px;
 
         }
 
@@ -50,7 +510,7 @@
             text-align: left;
             width: 100%;
             color: #666;
-            font-size: 18px;
+            font-size: 25px;
             line-height: 2  0px;
             height: 40px;
             overflow: hidden;
@@ -60,9 +520,9 @@
 
         .price {
 
-            font-size: 18px;
-            font-weight: bold;
-            color: #d81414;
+            font-size: 25px;
+            font-weight: bolder;
+            color: black;
             display: block;
             padding-left: 10px;
 
@@ -84,7 +544,7 @@
 
         .max {
 
-            font-size: 12px;
+            font-size: 20px;
             color: #999;
             height: 20px;
             line-height: 20px;
@@ -100,11 +560,552 @@
 
         }
 
+        #all {
+
+            display: flex;
+            width: 80%;
+            margin: auto;
+
+        }
+
+        .btn {
+
+            margin-right: 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            padding: 10px 20px 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        .btn1 {
+
+            margin-right: 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            padding: 10px 20px 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        /* css o footer */
+
+        #BS_footer-container{
+    
+            background-color: #ecf3fc;
+
+        }
+
+        #BS_why_buying {
+            
+            text-align: center;
+            padding: 2%;
+            color: rgb(0,102,255);
+            font-weight: 800;
+            word-spacing: 2%;
+            
+            /* font-family: "Open Sans", sans-serif; */
+
+        }
+
+        a {
+        
+            color: white;
+
+        }
+
+        #BS_foot_subscribe {
+            
+            padding: 3.5% 0;
+
+        }
+
+        #BS_foot_subscribe >div {
+            
+            width: 60%;
+            margin: auto;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #BS_foot_subscribe >div>input {
+
+            width: 85%;
+            padding: 1.5%;
+            outline: none;
+            border: 3px solid rgb(0,102,255);
+
+        }
+
+        #BS_foot_subscribe >div>button {
+
+            width: 15%;
+            border: none;
+            font-size: 100%;
+            background-color: rgb(0,102,255);
+            color: white;
+            font-weight: 400;
+
+        }
+
+        hr {
+
+            background-color: rgba(255, 255, 255, 0.84);
+
+        }
+
+        #BS_all_links {
+
+            padding-top: 3%;
+            display: flex;
+            padding-bottom: 2%;
+
+        }
+
+        #BS_links_container1 {
+            
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            font-size: small;
+            padding: 0 20px;
+            
+        }
+
+        #BS_links_container1>div>h4 {
+
+            margin-top: 5%;
+            font-weight: 200;
+            color: #46474A;
+
+        }
+
+        #BS_links_container1>div>h4:hover {
+
+            cursor: pointer;
+
+        }
+
+        .BS_links_header {
+
+            color: black !important;
+            font-weight: 700 !important;
+            cursor: default !important;
+
+        }
+
+        #BS_links_container2 {
+
+            width: 50%;
+            font-size: 90%;
+            padding:  10px 20px
+
+        }
+
+        #BS_links_container2>div {
+
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2%;
+
+        }
+
+        #BS_qr_images {
+            
+            width: 33%;
+            display: flex;
+
+        }
+
+        #BS_qr_images>div:last-child {
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #BS_qr_images>div:last-child>img {
+
+            width: 100%;
+
+        }
+
+        #BS_qr_images>div:first-child>img  {
+
+            width: 100%;
+
+        }
+
+        #BS_qr_images>div:last-child>img:nth-child(2) {
+
+            margin: 3% 0px;
+
+        }
+
+        .BS_links_icon {
+
+            width: 10%;
+
+        }
+
+        #BS_important_links {
+
+            margin-right: 2%;
+            width: 45%;
+
+        }
+
+        #BS_important_links>div:nth-child(2) {
+
+            margin: 6% 0px;
+
+        }
+
+        #BS_important_links>div {
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+        #BS_important_links>div>span {
+
+            margin-left: 5%;
+
+        }
+
+        #BS_social_links {
+
+            width: 40%;
+
+        }
+
+        #BS_popular_searches{
+
+            padding: 1%;
+
+        }
+
+        #BS_popular_searches>div {
+
+            margin-top: 2%;
+            margin-bottom: 2%;
+            box-sizing: border-box;
+
+        }
+
+        #BS_popular_searches>div>button {
+
+            background-color: white;
+            margin-right: 1%;
+            padding: 0.5% 0.8%;
+            border: none;
+            color: rgb(118, 119, 122);
+            /* font-size: .8rem; */
+            /* width: 15%; */
+
+        }
+
+        #BS_copyright{
+
+            text-align: center;
+            padding: 2%;
+            color: rgb(118, 119, 122);
+
+        }
+
+
 </style>
 
 <body>
 
-    <div id="container"></div>
+    <!-- Navbar -->
+
+    <div id="top_navbar">
+
+        <div id="BB_main">
+
+        <div id="top_options">
+            <div id="first_dropdwn">Save big with our app!
+                             
+      <div id="first_dropdwn_main">
+        <div id="first_dropdwn_mainn">
+            <div>Get exclusive app deals and discounts, download our app & SAVE</div>
+            <div id="qr_code_div">
+                <div>
+                    <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png" alt="">
+                </div>
+                <div id="second_qr_code_div">
+                    <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt="">
+                    <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt="">
+                    <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" alt="">
+                </div>
+            </div>
+            <div>Go to mobile site</div>
+        </div>
+      </div>
+            </div>
+
+      
+            <div id="second_dropdwn">
+                <button id="second_dropbtn_btn">Language ▼</button>
+                <div class="dropdown-content" style="overflow-y: scroll;">
+                  <a href="#">English</a>
+                  <a href="#">Chinese</a>
+                  <a href="#">Persian</a>
+                  <a href="#">Russian</a>
+                  <a href="#">Portuguese</a>
+                  <a href="#">Turkish</a>
+                  <a href="#">Italian</a>
+                  <a href="#">French</a>
+                  <a href="#">Spanish</a>
+                  <a href="#">Korean</a>
+                </div>
+              </div>
+              <div id="third_dropdwn">
+                <button id="third_dropbtn_btn">Support Center ▼</button>
+                <div class="dropdown-content" style="height:100px">
+                  <a href="#">Live Chat</a>
+                  <a href="#">Ticket </a>
+                  <a href="#">Help Center</a>
+                </div>
+              </div>
+        </div>
+
+        <div id="top_navbar_second">
+            <div id="top_navbar_second_img">
+                <img src="https://content1.geekbuying.com/V1.4/en/images/indexV7/Geekbuying.png" alt="">
+            </div>
+            <div id="top_navbar_second_search">
+                <select name="" id="">
+                    <option value="">All Categories</option>
+                    <option value="">Smart Home & Garden</option>
+                    <option value="">Phones & Accessories</option>
+                    <option value="">Wearable devices</option>
+                    <option value="">Automobiles & Motorcycles</option>
+                </select>
+                
+                <input type="text" placeholder="Search by keywords">
+                
+  
+            </div>
+            <div id="top_navbar_second_address">
+                <p>Ship to</p>
+                <div>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" alt="">
+                <p>/ INR </p>
+                <div id="BB_test">
+                <div id="shipToBox">
+                    <h5>Select Regional settings</h5>
+                    <p>Ship to</p>
+                    <select name="" class="country_select">
+                        <option value="">India</option>
+                        <option value="">China</option>
+                        <option value="">USA</option>
+                        <option value="">China</option>
+                        <option value="">Thailand</option>
+                        <option value="">Japan</option>
+                        <option value="">Malaysia</option>
+                        <option value="">Vietnam</option>
+                        <option value="">South Korea</option>
+                        <option value="">Singapore</option>
+                    </select>
+                    <p>Currency</p>
+                    <select name="" class="country_select">
+                        <option value="">INR ₹</option>
+                        <option value="">USD $</option>
+                        <option value="">EUR €</option>
+                        <option value="">JPY ¥</option>
+                        <option value="">NZD NZ$</option>
+                        <option value="">CHF CHF</option>
+                        <option value="">HUF Ft</option>
+                        <option value="">PHP ₱</option>
+                        <option value="">UAH ₴</option>
+                    </select>
+                    <button>Save</button>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+            <div id="top_navbar_second_user">
+                <img src="https://us.123rf.com/450wm/ylivdesign/ylivdesign1510/ylivdesign151000120/46153782-profile-icon-white-simple-image-isolated-on-blue-background.jpg?ver=6" alt="">
+                <p>Sign in</p>
+            </div>
+            <div id="top_navbar_second_cart">
+                <img src="https://content1.geekbuying.com/V1.4/en/images/indexV7/cart.png" alt="">
+            </div>
+        </div>
+
+        <div id="top_navbar_last">
+
+            <div id="top_category">Categories 
+                <div id="drop_category">
+                   <p>Local Warehouses</p>
+                   <p>Sports and Outdoors</p>
+                   <p>Smart Home & Garden</p>
+                   <p>Consumer Electronics</p>
+                   <p>TV Boxes & Mini PCs</p>
+                   <p>Computer & Tablets</p>
+                   <p>Toys & Hobbies</p>
+                   <p>Phones & Accessories</p>
+                   <p>Automobiles & Motorcycles</p>
+                   <p>Wearable devices</p>
+                   <p>Security Systems</p>
+                   <p>Fashion</p>
+                </div>
+            </div>
+
+            <div id="all_options_categories">
+            <div>New</div>
+            <div>Bestselling</div>
+            <div>Brand</div>
+            <div>Clearance</div>
+            <div>Deals</div>
+            <div>Coupons</div>
+            <div>App</div>
+
+        </div>
+    </div>
+    
+   </div>
+</div>
+
+    <!-- Middle Section -->
+
+    <div id="all">
+
+        <div id="container"></div>
+    
+        <div id="display"></div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+        <div id="BS_footer-container">
+
+            <div id="BS_why_buying">
+                Why buying from Geekbuying ?     +
+                
+            </div>
+            <hr>
+
+            <div id="BS_foot_subscribe">
+                <div>
+                    <input type="search" name="" id="BS_search" placeholder="Enter email to get 5% off coupon">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+            <hr>
+
+
+            <div id="BS_all_links">
+
+                <div id="BS_links_container1">
+                    <div>
+                        <h4 class="BS_links_header">Help</h4>
+                        <h4>Order status</h4>
+                        <h4>About us</h4>
+                        <h4>Contact us</h4>
+                        <h4>Warranty</h4>
+                        <h4>FAQs</h4>
+                        <h4>Sitemap</h4>
+                    </div>
+
+                    <div>
+                        <h4 class="BS_links_header">Support</h4>
+                        <h4>WhatGeek</h4>
+                        <h4>Shipping guide</h4>
+                        <h4>Payment information</h4>
+                        <h4>Wholesale</h4>
+                        <h4>Drop shipping</h4>
+                        <h4>Blog</h4>
+                        <h4>Affiliates</h4>
+                    </div>
+
+                    <div>
+                        <h4 class="BS_links_header">Policies</h4>
+                        <h4>Terms & conditions</h4>
+                        <h4>Return Policy</h4>
+                        <h4>Privacy</h4>
+                        <h4>Declaration</h4>
+                        <h4>Custom</h4>
+                    </div>
+                </div>
+
+                <div id="BS_links_container2">
+                    <h4 class="BS_links_header">Download the App</h4>
+                    <div>
+                        <!-- <h4 class="links_header">Download the App</h4> -->
+                        <div id="BS_qr_images">
+                            <div>
+                                <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png" alt="">
+                            </div>
+    
+                            <div>
+                                <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt="">
+                                <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt="">
+                                <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" alt="">
+                            </div>
+                            
+                        </div>
+                        <div id="BS_important_links">
+                            <div><img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/893/893257.png" alt=""><span>Service_payment@geekbuying.com</span> </div>
+                            <div><img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/7937/7937770.png" alt=""><span>Ticket</span> </div>
+                            <div><img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/3237/3237472.png" alt=""><span>Live Chat</span> </div>
+                        </div>
+                    </div>
+
+                    <h4 class="BS_links_header">Connect with us</h4>
+                    <div id="BS_social_links">
+                        <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/3128/3128304.png" alt="">
+                        <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/6681/6681032.png" alt="">
+                        <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/786/786407.png" alt="">
+                        <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/1057/1057248.png" alt="">
+                        <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/733/733579.png" alt="">
+                        <img class="BS_links_icon" src="https://cdn-icons-png.flaticon.com/128/1724/1724681.png" alt="">
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div id="BS_popular_searches">
+                <h4 id="BS_links_header">Popular Seaches</h4>
+                <div>
+                    <button>Geekbuying Coupon</button>
+                    <button>Roborock S7 Pro Ultra</button>
+                    <button>Tronsmart Bluetooth Speakers</button>
+                    <button>Windows mini PC</button>
+                    <button>ENGWE X26</button>
+                    <button>android tv boxes</button>
+                    <button>Kugookirin G2 Pro</button>
+                </div>
+                <div>
+                    <button>Portable Power Station</button>
+                    <button>LDS Robot Vaccum</button>
+                    <button>Electric Bike</button>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div id="BS_copyright">
+                <p>Copyright 2012-2022 GeekBuying.com. All rights reserved.</p>
+            </div>
+
+
+
+        </div>
+    </footer>
     
 </body>
 </html>
@@ -117,6 +1118,8 @@ console.log('product:', product)
 
 let container = document.getElementById('container')
 
+let display = document.getElementById('display')
+
 let div = document.createElement('div')
 
 let img = document.createElement('img')
@@ -127,14 +1130,14 @@ let brand = document.createElement('h3')
 brand.innerHTML = product.Brand
 
 let name = document.createElement('p')
-    name.innerHTML = product.name
+    name.innerHTML = product.title
     name.className = 'name'
 
     let offer = document.createElement('p')
     offer.innerHTML = product.offer
     offer.className = 'offer'
 
-    let MSRP = document.createElement('p')
+    let MSRP = document.createElement('del')
     MSRP.innerHTML = product.MSRP
     MSRP.className = 'max'
 
@@ -143,16 +1146,34 @@ let name = document.createElement('p')
     price.className = 'price'
 
     let review = document.createElement('p')
-    review.innerHTML = product.Reviews
+    review.innerHTML = 'Reviews:'+product.Reviews
     review.className = 'review'
 
     let code = document.createElement('p')
-    code.innerHTML = product.ItemCode
+    code.innerHTML = 'Item-Code: '+ product.ItemCode
     code.className = 'code'
 
-div.append(img, name, brand, offer, MSRP, price, review, code)
+    let btn = document.createElement('button')
+    btn.innerHTML = 'Add to Cart'
+    btn.style.color = 'blue'
+    btn.style.backgroundColor = 'white'
+    btn.style.border = '2px solid blue'
+    btn.className = 'btn'
+    btn.onclick = function() {
+        add(div)
+    }
 
-container.append(div)
+    let btn1 = document.createElement('button')
+    btn1.innerHTML = 'Buy Now'
+    btn1.style.color = 'white'
+    btn1.style.backgroundColor = 'blue'
+    btn1.style.border = '1px solid blue'
+    btn1.className = 'btn1'
+
+
+container.append(img)
+
+display.append(name, price, MSRP, offer, review, code, btn, btn1)
 
 // const startingMinutes = 10;
     // let time = startingMinutes * 60;
@@ -174,6 +1195,14 @@ container.append(div)
     //     time--;
 
     // }
+
+    function add(div) {
+
+        localStorage.setItem('items', JSON.stringify(div))
+
+        alert ('Added to Cart')
+
+    }
 
 </script>
 
